@@ -1,0 +1,16 @@
+@use '../layout';
+@use '../base';
+
+html{
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-style: normal;
+}
+h1{
+    // color: red;
+}
+
+//. Segoe Print ttf (400) WhatFontIs.com
+// sass --watch ./src/styles/main.scss:./src/styles/main.css
+// sass --watch ./src/styles/pages/main.scss:./src/styles/pages/main.css
+// $ sass --watch ./src/styles/ :./src/styles/pages/main.css$ sass --watch ./src/styles/ :./src/styles/pages/main.css
