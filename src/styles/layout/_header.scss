@@ -1,0 +1,10 @@
+header{
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    background: #6d4c41;
+    .contacts{
+        display: flex;
+        flex-direction: row;
+    }
+}

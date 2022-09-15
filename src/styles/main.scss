@@ -1,3 +1,10 @@
+@use './layout';
+html{
+    font-family: "montserrat", Arial, Helvetica, sans-serif;
+}
 h1{
     color: red;
 }
+
+//. Segoe Print ttf (400) WhatFontIs.com
+// sass --watch ./src/styles/main.scss:./src/styles/main.css
