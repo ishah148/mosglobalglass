@@ -1,27 +1,45 @@
 header {
     width: 100%;
+    background:var(--primary-grey);
+}
+.header__container{
     max-width: var(--max-width);
     margin: auto;
-    background: #6d4c41;
     padding: 10px var(--padding-primary);
-    // background-image:url(../../assets/logo.webp);
-    // background-image:url(../../assets/sprites/telephone.svg);
-    // background-size: 50px 80px;
-
+    font-weight: 500;
+    color: var(--primary-text);
     .contacts {
         display: flex;
-        flex-direction: row;
-        // background-image:url(../../assets/sprites/telephone.svg);
-        li{
+        flex-direction: row-reverse;
+        ul {
+            display: flex;
+            gap: 50px;
+        }
+        li {
             list-style-image: url(../../assets/sprites/telephone.svg);
         }
     }
-    nav {
-        ul {
-            display: flex;
-            justify-content: space-evenly;
-            li {
-                list-style-type: none;
+
+    .header__nav-container {
+        display: flex;
+        .logo-container{
+            @media (max-width: 600px) {
+                display: none;
+            }
+        }
+        nav {
+            flex: 3;
+            ul {
+                display: flex;
+                justify-content: space-evenly;
+                padding: 0;
+                gap: 10px;
+                li {
+                    list-style-type: none;
+                    a{
+                        color: var(--primary-text);
+                    }
+                }
             }
         }
     }

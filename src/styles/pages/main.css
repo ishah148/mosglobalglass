@@ -1,23 +1,59 @@
 header {
   width: 100%;
+  background: var(--primary-grey);
+}
+
+.header__container {
   max-width: var(--max-width);
   margin: auto;
-  background: #6d4c41;
   padding: 10px var(--padding-primary);
+  font-weight: 500;
+  color: var(--primary-text);
 }
-header .contacts {
+.header__container .contacts {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
 }
-header .contacts li {
+.header__container .contacts ul {
+  display: flex;
+  gap: 50px;
+}
+.header__container .contacts li {
   list-style-image: url(../../assets/sprites/telephone.svg);
 }
-header nav ul {
+.header__container .header__nav-container {
+  display: flex;
+}
+@media (max-width: 600px) {
+  .header__container .header__nav-container .logo-container {
+    display: none;
+  }
+}
+.header__container .header__nav-container nav {
+  flex: 3;
+}
+.header__container .header__nav-container nav ul {
   display: flex;
   justify-content: space-evenly;
+  padding: 0;
+  gap: 10px;
 }
-header nav ul li {
+.header__container .header__nav-container nav ul li {
   list-style-type: none;
+}
+.header__container .header__nav-container nav ul li a {
+  color: var(--primary-text);
+}
+
+main {
+  width: 100%;
+  height: 1000px;
+  position: relative;
+  background: url(../../assets/bg.jpg) center center/cover no-repeat;
+}
+
+.service {
+  color: var(--primary-text);
 }
 
 @font-face {
@@ -147,15 +183,30 @@ header nav ul li {
   font-style: italic;
 }
 :root {
-  --primary-extra-light: #ffffff;
-  --primary-extra-dark: #000000;
-  --primary-color:#455a64;
-  --primary-light:#718792;
-  --primary-dark: rgba(111,111,111);
-  --primary-gold: #ffffff;
-  --pane-padding: 5px 42px;
-  --max-width:1440px;
+  --primary-orange: #ff9000;
+  --primary-grey: #343434;
+  --primary-light: #718792;
+  --primary-text: #f0f0f0;
+  --max-width: 1440px;
   --padding-primary: 40px;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --padding-primary: 20px;
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --padding-primary: 10px;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
 }
 
 html {
