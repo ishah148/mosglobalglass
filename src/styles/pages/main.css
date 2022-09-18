@@ -30,6 +30,7 @@ header {
   }
 }
 .header__container .header__nav-container nav {
+  align-self: center;
   flex: 3;
 }
 .header__container .header__nav-container nav ul {
@@ -37,6 +38,8 @@ header {
   justify-content: space-evenly;
   padding: 0;
   gap: 10px;
+  font-size: 12px;
+  font-weight: 600;
 }
 .header__container .header__nav-container nav ul li {
   list-style-type: none;
@@ -47,12 +50,111 @@ header {
 
 main {
   width: 100%;
-  height: 1000px;
   position: relative;
   background: url(../../assets/bg.jpg) center center/cover no-repeat;
+  min-height: 100vh;
+}
+main a,
+main li,
+main h1,
+main h4,
+main h3,
+main h2,
+main p {
+  position: relative;
+  z-index: 2;
+}
+main h1 {
+  padding-top: 25px;
+  text-align: center;
+}
+main ul {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 370px;
+  padding: 20px;
+  margin: auto;
+  font-weight: 500;
+}
+@media (max-width: 390px) {
+  main ul {
+    font-size: 14px;
+  }
+}
+main li {
+  align-self: start;
+  color: var(--primary-text);
+}
+
+.main__blackout {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: brightness(60%);
+}
+
+.main__service-types {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+}
+.main__service-types .main__service-blackout {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.431372549);
+}
+.main__service-types .service-item {
+  width: 200px;
+  font-size: 14px;
+}
+.main__service-types .service-item h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.main__service-types .service-item p {
+  text-align: center;
+}
+
+.main__maps {
+  z-index: 2;
+  position: relative;
+  padding: 20px;
+  margin: auto;
+  max-width: var(--max-width);
 }
 
 .service {
+  color: var(--primary-text);
+}
+
+footer {
+  background: var(--primary-grey);
+  padding: 20px;
+  width: 100%;
+}
+footer .container {
+  max-width: var(--max-width);
+  display: flex;
+  font-size: 14px;
+  justify-content: space-around;
+  margin: auto;
+}
+footer .container .item {
+  width: 250px;
+}
+footer .container .item h3 {
+  text-align: center;
+  padding: 10px;
+}
+footer .container .item ul {
   color: var(--primary-text);
 }
 
@@ -207,6 +309,20 @@ main {
 
 a {
   text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  color: var(--primary-text);
+}
+
+a {
+  color: var(--primary-text);
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
 
 html {

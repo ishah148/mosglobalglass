@@ -6,14 +6,23 @@
 a{
     text-decoration: none;
 }
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    color: var(--primary-text);  
+}
+a{
+    color: var(--primary-text);
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
 html{
     font-family: 'Montserrat';
     font-weight: 300;
     font-style: normal;
 }
-h1{
-    // color: red;
-}
+
 
 //. Segoe Print ttf (400) WhatFontIs.com
 // sass --watch ./src/styles/main.scss:./src/styles/main.css

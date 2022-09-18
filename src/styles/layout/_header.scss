@@ -28,12 +28,15 @@ header {
             }
         }
         nav {
+            align-self: center;
             flex: 3;
             ul {
                 display: flex;
                 justify-content: space-evenly;
                 padding: 0;
                 gap: 10px;
+                font-size: 12px;
+                font-weight: 600;
                 li {
                     list-style-type: none;
                     a{
