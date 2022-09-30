@@ -8,11 +8,16 @@ footer{
         font-size: 14px;
         justify-content: space-around;
         margin: auto;
-        
+        align-items: center;
+        @media (max-width:600px ){
+            flex-direction: column;
+            gap: 25px;
+        }
         .item{
             width: 250px;
             h3{
-                text-align: center;
+                // text-align: center;
+                text-align: justify ;
                 padding: 10px;
                 
             }

@@ -1,5 +1,6 @@
 @use '../layout';
 @use '../base';
+@use '../components';
 *{
     box-sizing: border-box;
 }
@@ -12,6 +13,9 @@ h1,h2,h3,h4,h5,h6,p{
 }
 a{
     color: var(--primary-text);
+}
+body{
+    background: rgba($color: black, $alpha:0.9);
 }
 ul{
     padding: 0;
