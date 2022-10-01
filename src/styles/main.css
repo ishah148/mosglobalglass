@@ -1,5 +1,49 @@
-h1 {
-  color: red;
+header { 
+background: rgba(54, 36, 25, 0.623);
+display: flex;
+flex-direction: column;
+color: beige;
+}
+.contacts{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.navigation{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+main{
+background: rgba(54, 36, 25, 0.623);
+display: flex;
+flex-direction: column;
+color: beige;
+}
+
+footer{
+background: rgba(54, 36, 25, 0.623);
+display: flex;
+flex-direction: row;
+color: beige;
+justify-content: space-around;
+}
+.but{
+  display: flex;
+  justify-content: center;
+}
+.glav{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+button {
+  background-color: rgb(236, 104, 15);
+  width: 150px;
+  height: 50px;
 }
 
 /*# sourceMappingURL=main.css.map */
