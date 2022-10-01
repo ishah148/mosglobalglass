@@ -1,12 +1,11 @@
 :root {
   --primary-orange: #ff9000;
   --primary-grey: #343434;
-  --primary-light: #718792;
   --primary-text: #f0f0f0;
   --max-width: 1440px;
   --padding-primary: 40px;
 }
-
+ 
 @media (max-width: 1024px) {
   :root {
     --padding-primary: 20px;

@@ -9,7 +9,7 @@ footer{
         justify-content: space-around;
         margin: auto;
         align-items: center;
-        @media (max-width:600px ){
+        @media (max-width:768px ){
             flex-direction: column;
             gap: 25px;
         }

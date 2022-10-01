@@ -11,9 +11,17 @@
 </head>
 
 <body>
+
+    <div class="blackout"></div>
+
     <header>
 
         <div class="header__container">
+            <div class="hamburger">
+                <div class="hamburger__line"></div>
+                <div class="hamburger__line"></div>
+                <div class="hamburger__line"></div>
+            </div>
             <div class="contacts">
                 <ul>
                     <li>+74959914056</li>
@@ -33,6 +41,7 @@
                     </ul>
                 </nav>
             </div>
+
         </div>
 
     </header>
@@ -111,18 +120,20 @@
 
 
     <div class="burger-menu">
-        <div class="switch-lang switch-lang--burger">
-            <button class="en" data-switch="en">en</button>
-            <span class="slash">/</span>
-            <button class="ru active" data-switch="ru">ru</button>
-        </div>
         <div class="burger-menu__logo">
             <!-- <svg class="svg-icon burger-menu__svg" target="_blank">
                 <use xlink:href="../assets/svg/burger_sprite.svg#burger"></use>
             </svg> -->
-            <img class="burger-menu__svg" src="../assets/images/Farba_logo_w.svg" alt="logo">
+            <!-- <img class="burger-menu__svg" src="../assets/images/Farba_logo_w.svg" alt="logo"> -->
         </div>
-        <div class="burger-menu__contacts">+375 (29) 777-40-59</div>
+        <div class="burger-menu__contacts">
+            <div class="contacts">
+                <ul>
+                    <li>+74959914056</li>
+                    <li>+79104458483</li>
+                </ul>
+            </div>
+        </div>
         <nav class="burger-menu__content">
             <ul class="burger-menu__list">
                 <li class="burger-menu__list-item">
@@ -142,7 +153,7 @@
         </nav>
     </div>
 
-
+    <script src="hamburger.js"></script>
 
 </body>
 
