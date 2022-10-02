@@ -68,7 +68,7 @@ header {
 main {
   width: 100%;
   position: relative;
-  background: url(../../assets/bg.jpg) center center/cover no-repeat;
+  background: url(../../assets/bg.webp) center center/cover no-repeat;
   max-width: 1920px;
   margin: auto;
 }
@@ -142,7 +142,7 @@ main li {
   position: relative;
   margin: auto;
 }
-@media (max-width: 390px) {
+@media (max-width: 425px) {
   .main__service-types {
     flex-direction: column;
     width: 300px;
@@ -160,6 +160,8 @@ main li {
 .main__service-types .service-item {
   width: 200px;
   font-size: 14px;
+  padding: 10px;
+  position: relative;
 }
 .main__service-types .service-item h2 {
   text-align: center;
@@ -168,6 +170,28 @@ main li {
 .main__service-types .service-item p {
   text-align: center;
 }
+.main__service-types .service-item--center::before, .main__service-types .service-item--center::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 3px;
+  height: 100%;
+  border-radius: 3px;
+  background: var(--primary-orange);
+}
+@media (max-width: 425px) {
+  .main__service-types .service-item--center::before, .main__service-types .service-item--center::after {
+    display: none;
+  }
+}
+.main__service-types .service-item--center::before {
+  top: 0;
+  left: 0;
+}
+.main__service-types .service-item--center::after {
+  top: 0px;
+  right: 0px;
+}
 
 .main__maps {
   z-index: 2;
@@ -175,6 +199,26 @@ main li {
   padding: 20px;
   margin: auto;
   max-width: var(--max-width);
+}
+
+.call-me-container {
+  margin: auto;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 25px;
+}
+.call-me-container button {
+  display: block;
+  margin: auto;
+  width: 250px;
+  height: 67px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  background: var(--primary-orange);
+  color: #fafafa;
+  font-size: 20px;
 }
 
 .service {
@@ -215,6 +259,7 @@ footer .container .item ul {
   font-family: "Montserrat";
   src: url("../../assets/fonts/Montserrat-Light.eot");
   src: local("Montserrat Light"), local("Montserrat-Light"), url("../../assets/fonts/Montserrat-Light.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Montserrat-Light.woff") format("woff"), url("../../assets/fonts/Montserrat-Light.ttf") format("truetype");
+  font-display: optional;
   font-weight: 300;
   font-style: normal;
 }
@@ -222,6 +267,7 @@ footer .container .item ul {
   font-family: "Montserrat";
   src: url("../../assets/fonts/Montserrat-MediumItalic.eot");
   src: local("Montserrat Medium Italic"), local("Montserrat-MediumItalic"), url("../../assets/fonts/Montserrat-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Montserrat-MediumItalic.woff") format("woff"), url("../../assets/fonts/Montserrat-MediumItalic.ttf") format("truetype");
+  font-display: optional;
   font-weight: 500;
   font-style: italic;
 }
@@ -229,6 +275,7 @@ footer .container .item ul {
   font-family: "Montserrat";
   src: url("../../assets/fonts/Montserrat-Thin.eot");
   src: local("Montserrat Thin"), local("Montserrat-Thin"), url("../../assets/fonts/Montserrat-Thin.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Montserrat-Thin.woff") format("woff"), url("../../assets/fonts/Montserrat-Thin.ttf") format("truetype");
+  font-display: optional;
   font-weight: 100;
   font-style: normal;
 }
@@ -236,6 +283,7 @@ footer .container .item ul {
   font-family: "Montserrat";
   src: url("../../assets/fonts/Montserrat-ExtraLightItalic.eot");
   src: local("Montserrat ExtraLight Italic"), local("Montserrat-ExtraLightItalic"), url("../../assets/fonts/Montserrat-ExtraLightItalic.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Montserrat-ExtraLightItalic.woff") format("woff"), url("../../assets/fonts/Montserrat-ExtraLightItalic.ttf") format("truetype");
+  font-display: optional;
   font-weight: 200;
   font-style: italic;
 }
@@ -243,6 +291,7 @@ footer .container .item ul {
   font-family: "Montserrat";
   src: url("../../assets/fonts/Montserrat-BoldItalic.eot");
   src: local("Montserrat Bold Italic"), local("Montserrat-BoldItalic"), url("../../assets/fonts/Montserrat-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Montserrat-BoldItalic.woff") format("woff"), url("../../assets/fonts/Montserrat-BoldItalic.ttf") format("truetype");
+  font-display: optional;
   font-weight: bold;
   font-style: italic;
 }
@@ -250,6 +299,7 @@ footer .container .item ul {
   font-family: "Montserrat";
   src: url("../../assets/fonts/Montserrat-SemiBold.eot");
   src: local("Montserrat SemiBold"), local("Montserrat-SemiBold"), url("../../assets/fonts/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Montserrat-SemiBold.woff") format("woff"), url("../../assets/fonts/Montserrat-SemiBold.ttf") format("truetype");
+  font-display: optional;
   font-weight: 600;
   font-style: normal;
 }
@@ -257,6 +307,7 @@ footer .container .item ul {
   font-family: "Montserrat";
   src: url("../../assets/fonts/Montserrat-ExtraLight.eot");
   src: local("Montserrat ExtraLight"), local("Montserrat-ExtraLight"), url("../../assets/fonts/Montserrat-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Montserrat-ExtraLight.woff") format("woff"), url("../../assets/fonts/Montserrat-ExtraLight.ttf") format("truetype");
+  font-display: optional;
   font-weight: 200;
   font-style: normal;
 }
@@ -264,6 +315,7 @@ footer .container .item ul {
   font-family: "Montserrat";
   src: url("../../assets/fonts/Montserrat-ExtraBoldItalic.eot");
   src: local("Montserrat ExtraBold Italic"), local("Montserrat-ExtraBoldItalic"), url("../../assets/fonts/Montserrat-ExtraBoldItalic.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Montserrat-ExtraBoldItalic.woff") format("woff"), url("../../assets/fonts/Montserrat-ExtraBoldItalic.ttf") format("truetype");
+  font-display: optional;
   font-weight: 800;
   font-style: italic;
 }
@@ -271,6 +323,7 @@ footer .container .item ul {
   font-family: "Montserrat";
   src: url("../../assets/fonts/Montserrat-Italic.eot");
   src: local("Montserrat Italic"), local("Montserrat-Italic"), url("../../assets/fonts/Montserrat-Italic.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Montserrat-Italic.woff") format("woff"), url("../../assets/fonts/Montserrat-Italic.ttf") format("truetype");
+  font-display: optional;
   font-weight: normal;
   font-style: italic;
 }
@@ -278,6 +331,7 @@ footer .container .item ul {
   font-family: "Montserrat";
   src: url("../../assets/fonts/Montserrat-Bold.eot");
   src: local("Montserrat Bold"), local("Montserrat-Bold"), url("../../assets/fonts/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Montserrat-Bold.woff") format("woff"), url("../../assets/fonts/Montserrat-Bold.ttf") format("truetype");
+  font-display: optional;
   font-weight: bold;
   font-style: normal;
 }
@@ -285,6 +339,7 @@ footer .container .item ul {
   font-family: "Montserrat";
   src: url("../../assets/fonts/Montserrat-LightItalic.eot");
   src: local("Montserrat Light Italic"), local("Montserrat-LightItalic"), url("../../assets/fonts/Montserrat-LightItalic.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Montserrat-LightItalic.woff") format("woff"), url("../../assets/fonts/Montserrat-LightItalic.ttf") format("truetype");
+  font-display: optional;
   font-weight: 300;
   font-style: italic;
 }
@@ -292,6 +347,7 @@ footer .container .item ul {
   font-family: "Montserrat";
   src: url("../../assets/fonts/Montserrat-BlackItalic.eot");
   src: local("Montserrat Black Italic"), local("Montserrat-BlackItalic"), url("../../assets/fonts/Montserrat-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Montserrat-BlackItalic.woff") format("woff"), url("../../assets/fonts/Montserrat-BlackItalic.ttf") format("truetype");
+  font-display: optional;
   font-weight: 900;
   font-style: italic;
 }
@@ -299,6 +355,7 @@ footer .container .item ul {
   font-family: "Montserrat";
   src: url("../../assets/fonts/Montserrat-SemiBoldItalic.eot");
   src: local("Montserrat SemiBold Italic"), local("Montserrat-SemiBoldItalic"), url("../../assets/fonts/Montserrat-SemiBoldItalic.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Montserrat-SemiBoldItalic.woff") format("woff"), url("../../assets/fonts/Montserrat-SemiBoldItalic.ttf") format("truetype");
+  font-display: optional;
   font-weight: 600;
   font-style: italic;
 }
@@ -306,6 +363,7 @@ footer .container .item ul {
   font-family: "Montserrat";
   src: url("../../assets/fonts/Montserrat-Regular.eot");
   src: local("Montserrat Regular"), local("Montserrat-Regular"), url("../../assets/fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Montserrat-Regular.woff") format("woff"), url("../../assets/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-display: optional;
   font-weight: normal;
   font-style: normal;
 }
@@ -313,6 +371,7 @@ footer .container .item ul {
   font-family: "Montserrat";
   src: url("../../assets/fonts/Montserrat-Medium.eot");
   src: local("Montserrat Medium"), local("Montserrat-Medium"), url("../../assets/fonts/Montserrat-Medium.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Montserrat-Medium.woff") format("woff"), url("../../assets/fonts/Montserrat-Medium.ttf") format("truetype");
+  font-display: optional;
   font-weight: 500;
   font-style: normal;
 }
@@ -320,6 +379,7 @@ footer .container .item ul {
   font-family: "Montserrat";
   src: url("../../assets/fonts/Montserrat-ExtraBold.eot");
   src: local("Montserrat ExtraBold"), local("Montserrat-ExtraBold"), url("../../assets/fonts/Montserrat-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Montserrat-ExtraBold.woff") format("woff"), url("../../assets/fonts/Montserrat-ExtraBold.ttf") format("truetype");
+  font-display: optional;
   font-weight: 800;
   font-style: normal;
 }
@@ -327,6 +387,7 @@ footer .container .item ul {
   font-family: "Montserrat";
   src: url("../../assets/fonts/Montserrat-Black.eot");
   src: local("Montserrat Black"), local("Montserrat-Black"), url("../../assets/fonts/Montserrat-Black.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Montserrat-Black.woff") format("woff"), url("../../assets/fonts/Montserrat-Black.ttf") format("truetype");
+  font-display: optional;
   font-weight: 900;
   font-style: normal;
 }
@@ -334,6 +395,7 @@ footer .container .item ul {
   font-family: "Montserrat";
   src: url("../../assets/fonts/Montserrat-ThinItalic.eot");
   src: local("Montserrat Thin Italic"), local("Montserrat-ThinItalic"), url("../../assets/fonts/Montserrat-ThinItalic.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Montserrat-ThinItalic.woff") format("woff"), url("../../assets/fonts/Montserrat-ThinItalic.ttf") format("truetype");
+  font-display: optional;
   font-weight: 100;
   font-style: italic;
 }
@@ -538,6 +600,453 @@ footer .container .item ul {
   transform: translateZ(0);
 }
 
+:root {
+  --msg-window-width: 340px;
+  --right-msg-window: 40px;
+}
+
+@media (max-width: 500px) {
+  :root {
+    --msg-window-width: 320px;
+    --right-msg-window: calc((100vw - var(--msg-window-width)) / 2);
+  }
+}
+.contacts-window__wrapper {
+  z-index: -1;
+  position: fixed;
+  bottom: 10px;
+  right: 0px;
+  width: 100vw;
+  height: 555px;
+  transition: z-index 0.3s;
+  overflow: hidden;
+}
+.contacts-window__wrapper.open {
+  z-index: 110;
+  transition: z-index 0.3s;
+  width: 100vw;
+  height: 555px;
+}
+
+.contacts-window-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.contacts-window__container {
+  z-index: -1;
+  overflow: hidden;
+  padding: 30px 15px 0px 15px;
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+  position: absolute;
+  right: -103px;
+  bottom: -189px;
+  background: #1c313a;
+  border-radius: 20px;
+  transform: scale(0.01);
+  transition: transform 0.3s, right 0.4s, bottom 0.4s;
+}
+.contacts-window__container.open {
+  position: absolute;
+  z-index: 20;
+  right: var(--right-msg-window);
+  bottom: 60px;
+  transition: transform 0.3s, right 0.4s, bottom 0.4s;
+  width: var(--msg-window-width);
+  height: 494px;
+  transform: scale(1);
+}
+@media (max-width: 500px) {
+  .contacts-window__container {
+    padding: 30px 5px 0 5px;
+  }
+}
+
+.contacts-window__h2 {
+  text-align: center;
+  font-size: 24px;
+}
+
+.contacts-window__connect {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contacts-window__connect .contacts-window__icons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.contacts-window__connect .contacts-window__phone-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 2px solid #f5f5f6;
+  gap: 10px;
+}
+
+.contacts-window__order-call .contacts-window__form {
+  font-size: 20px;
+  color: #989898;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contacts-window__order-call .contacts-window__form input {
+  border-radius: 10px;
+  text-align: left;
+  padding: 10px;
+  height: 30px;
+  color: #000000;
+  border: none;
+  -moz-appearance: textfield;
+}
+.contacts-window__order-call .contacts-window__form .contacts-window__user-number:checked {
+  background: yellow;
+}
+.contacts-window__order-call .contacts-window__form .contacts-window__user-number.good {
+  outline: none;
+  border: 3px solid rgba(76, 175, 80, 0.8);
+}
+.contacts-window__order-call .contacts-window__form .contacts-window__user-number.good:focus {
+  outline: none;
+  border: 3px solid rgba(76, 175, 80, 0.8);
+}
+.contacts-window__order-call .contacts-window__form .contacts-window__user-number.error {
+  outline: none;
+  border: 3px solid rgba(244, 67, 54, 0.8);
+}
+.contacts-window__order-call .contacts-window__form .contacts-window__user-number.error:focus {
+  outline: none;
+  border: 3px solid rgba(244, 67, 54, 0.8);
+}
+.contacts-window__order-call .contacts-window__form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.contacts-window__order-call .contacts-window__form .contacts-window__button-send {
+  color: white;
+  background: transparent;
+  text-decoration: none;
+  border: none;
+  align-self: center;
+  width: 247px;
+  border-bottom: 1px solid white;
+}
+.contacts-window__order-call .contacts-window__form .contacts-window__button-send.sended {
+  color: #b2fab4;
+  border-bottom: 1px solid #b2fab4;
+}
+.contacts-window__order-call .contacts-window__form .contacts-window__button-send.error {
+  color: red;
+  border-bottom: 1px solid red;
+}
+
+.contacts-window__text-me {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+.contacts-window__text-me .contacts-window__border-main {
+  overflow: hidden;
+  width: 305px;
+  height: 33px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background: #1c313a;
+  text-align: center;
+  font-size: 20px;
+  text-align: center;
+  padding: 2px;
+  position: relative;
+}
+.contacts-window__text-me .contacts-window__border-test {
+  width: 283px;
+  height: 15px;
+  border: 2px solid white;
+  border-radius: 10px;
+  position: absolute;
+}
+.contacts-window__text-me .contacts-window__border-test.decore--up {
+  top: 40px;
+  left: 10px;
+}
+.contacts-window__text-me .contacts-window__border-test.decore--down {
+  top: 72px;
+  left: 10px;
+}
+
+.contacts-window__button {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #f5f5f6;
+  border-radius: 50%;
+  position: absolute;
+  position: fixed;
+  right: 0px;
+  bottom: 10px;
+}
+
+.contacts-window__callback-bt {
+  background: #38a3fd;
+  border: 2px solid #38a3fd;
+  border-radius: 50%;
+  box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3);
+  cursor: pointer;
+  height: 68px;
+  text-align: center;
+  width: 68px;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 1110;
+  transition: 0.3s;
+  -webkit-animation: hoverWave linear 1s infinite;
+  animation: hoverWave linear 1s infinite;
+  transform: scale(1);
+}
+.contacts-window__callback-bt.hidden {
+  transform: scale(0.001);
+  z-index: -1;
+}
+.contacts-window__callback-bt a {
+  color: #5587c4;
+  text-decoration: none;
+}
+.contacts-window__callback-bt:hover .contacts-window__text-call .text {
+  opacity: 1;
+  font-size: 11px;
+}
+.contacts-window__callback-bt:hover .fa.fa-phone {
+  display: none;
+}
+.contacts-window__callback-bt .contacts-window__text-call {
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.contacts-window__callback-bt .contacts-window__text-call .fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.contacts-window__callback-bt .contacts-window__text-call .fa.fa-phone {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  background: url(../../assets/icons/mailButton.png);
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+}
+.contacts-window__callback-bt .contacts-window__text-call .text {
+  text-align: center;
+  color: #38a3fd;
+  opacity: 0;
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  line-height: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: opacity 0.3s linear;
+}
+.contacts-window__callback-bt .fa-phone {
+  animation: 1732ms ease 0s normal none 1 running shake;
+  animation-iteration-count: infinite;
+  -webkit-animation: 1732ms ease 0s normal none 1 running shake;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.contacts-window__callback-bt:hover i {
+  display: none;
+}
+
+.contacts-window__callback-bt:hover {
+  background: #fff;
+  color: transparent;
+  transition: 0.3s;
+}
+
+.contacts-window__callback-bt:hover i {
+  color: #38a3fd;
+  font-size: 40px;
+  transition: 0.3s;
+}
+
+.contacts-window__callback-bt i {
+  color: #fff;
+  font-size: 34px;
+  transition: 0.3s;
+  line-height: 66px;
+  transition: 0.5s ease-in-out;
+}
+
+.contacts-window__callback-bt .fa-phone:before {
+  /* content: url(/213074_f095_icon.png); */
+}
+
+@keyframes shake {
+  0% {
+    transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -webkit-transform: rotateZ(0deg);
+  }
+  10% {
+    transform: rotateZ(-30deg);
+    -ms-transform: rotateZ(-30deg);
+    -webkit-transform: rotateZ(-30deg);
+  }
+  20% {
+    transform: rotateZ(15deg);
+    -ms-transform: rotateZ(15deg);
+    -webkit-transform: rotateZ(15deg);
+  }
+  30% {
+    transform: rotateZ(-10deg);
+    -ms-transform: rotateZ(-10deg);
+    -webkit-transform: rotateZ(-10deg);
+  }
+  40% {
+    transform: rotateZ(7.5deg);
+    -ms-transform: rotateZ(7.5deg);
+    -webkit-transform: rotateZ(7.5deg);
+  }
+  50% {
+    transform: rotateZ(-6deg);
+    -ms-transform: rotateZ(-6deg);
+    -webkit-transform: rotateZ(-6deg);
+    background: url(../../assets/icons/phoneButton.png);
+    background-size: 30px 30px;
+  }
+  60% {
+    transform: rotateZ(5deg);
+    -ms-transform: rotateZ(5deg);
+    -webkit-transform: rotateZ(5deg);
+  }
+  70% {
+    transform: rotateZ(-4.28571deg);
+    -ms-transform: rotateZ(-4.28571deg);
+    -webkit-transform: rotateZ(-4.28571deg);
+  }
+  80% {
+    transform: rotateZ(3.75deg);
+    -ms-transform: rotateZ(3.75deg);
+    -webkit-transform: rotateZ(3.75deg);
+  }
+  90% {
+    transform: rotateZ(-3.33333deg);
+    -ms-transform: rotateZ(-3.33333deg);
+    -webkit-transform: rotateZ(-3.33333deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -webkit-transform: rotateZ(0deg);
+  }
+}
+@-webkit-keyframes hoverWave {
+  0% {
+    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 0 rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2);
+  }
+  40% {
+    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 15px rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2);
+  }
+  80% {
+    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 26.7px rgba(56, 163, 253, 0.067);
+  }
+  100% {
+    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 40px rgba(56, 163, 253, 0);
+  }
+}
+@keyframes hoverWave {
+  0% {
+    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 0 rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2);
+  }
+  40% {
+    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 15px rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2);
+  }
+  80% {
+    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 26.7px rgba(56, 163, 253, 0.067);
+  }
+  100% {
+    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 40px rgba(56, 163, 253, 0);
+  }
+}
+/* animations icon */
+@-webkit-keyframes shake {
+  0% {
+    transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -webkit-transform: rotateZ(0deg);
+  }
+  10% {
+    transform: rotateZ(-30deg);
+    -ms-transform: rotateZ(-30deg);
+    -webkit-transform: rotateZ(-30deg);
+  }
+  20% {
+    transform: rotateZ(15deg);
+    -ms-transform: rotateZ(15deg);
+    -webkit-transform: rotateZ(15deg);
+  }
+  30% {
+    transform: rotateZ(-10deg);
+    -ms-transform: rotateZ(-10deg);
+    -webkit-transform: rotateZ(-10deg);
+  }
+  40% {
+    transform: rotateZ(7.5deg);
+    -ms-transform: rotateZ(7.5deg);
+    -webkit-transform: rotateZ(7.5deg);
+  }
+  50% {
+    transform: rotateZ(-6deg);
+    -ms-transform: rotateZ(-6deg);
+    -webkit-transform: rotateZ(-6deg);
+  }
+  60% {
+    transform: rotateZ(5deg);
+    -ms-transform: rotateZ(5deg);
+    -webkit-transform: rotateZ(5deg);
+  }
+  70% {
+    transform: rotateZ(-4.28571deg);
+    -ms-transform: rotateZ(-4.28571deg);
+    -webkit-transform: rotateZ(-4.28571deg);
+  }
+  80% {
+    transform: rotateZ(3.75deg);
+    -ms-transform: rotateZ(3.75deg);
+    -webkit-transform: rotateZ(3.75deg);
+  }
+  90% {
+    transform: rotateZ(-3.33333deg);
+    -ms-transform: rotateZ(-3.33333deg);
+    -webkit-transform: rotateZ(-3.33333deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -webkit-transform: rotateZ(0deg);
+  }
+}
 * {
   box-sizing: border-box;
 }

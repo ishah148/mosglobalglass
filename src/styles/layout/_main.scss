@@ -1,7 +1,7 @@
 main {
     width: 100%;
     position: relative;
-    background: url(../../assets/bg.jpg) center center/cover no-repeat;
+    background: url(../../assets/bg.webp) center center/cover no-repeat;
     // min-height: calc(100vh - 250px);
     max-width: 1920px;
     margin: auto;
@@ -70,7 +70,7 @@ main {
     gap: 15px;
     position: relative;
     margin: auto;
-    @media (max-width: 390px){
+    @media (max-width: 425px){
         flex-direction: column;
         width: 300px;
         align-items: center;
@@ -87,6 +87,8 @@ main {
     .service-item {
         width: 200px;
         font-size: 14px;
+        padding: 10px;
+        position: relative;
         h2 {
             text-align: center;
             margin-bottom: 10px;
@@ -95,12 +97,54 @@ main {
             text-align: center;
         }
     }
+    .service-item--center{
+        &::before,&::after{
+            content: '';
+            position: absolute;
+            z-index: 1;
+            width: 3px;
+            height: 100%;
+            border-radius: 3px;
+            background:var(--primary-orange);
+            @media (max-width: 425px){
+                display: none;
+            }
+        }
+        &::before{
+            top: 0;
+            left: 0;
+        }
+        &::after{
+            top: 0px;
+            right: 0px;
+        }
+    }
 }
-
+ 
 .main__maps {
     z-index: 2;
     position: relative;
     padding: 20px;
     margin: auto;
     max-width: var(--max-width);
+}
+
+.call-me-container{
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 25px;
+    button{
+        display: block;
+        margin: auto;
+        width: 250px;
+        height: 67px;
+        border-radius: 10px;
+        text-decoration: none;
+        border: none;
+        background: var(--primary-orange);
+        color: #fafafa;
+        font-size: 20px;
+    }
 }

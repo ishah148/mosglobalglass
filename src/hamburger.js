@@ -25,12 +25,12 @@ laptopMinWidth.addEventListener("change", function (laptopMinScreenSize) {
     if (laptopMinScreenSize.matches) {
         closeMenu();
     }
-});
+},{passive: true});
 
 
 blackout.addEventListener("click", () => {
     closeMenu();
-});
+},{passive: true});
 
 hamburger.addEventListener("click", (event) => {
     if (event.currentTarget.classList.contains("open-menu")) {
@@ -38,22 +38,22 @@ hamburger.addEventListener("click", (event) => {
     } else {
         addMenu();
     }
-});
+},{passive: true});
 
 burgerMenuLinks.forEach((link) => {
     link.addEventListener("click", () => closeMenu());
-});
+},{passive: true});
 
 burgerMenuListItems.forEach((item) => {
     item.addEventListener("mouseover", () => {
         item.classList.add("list-item--active");
-    });
+    },{passive: true});
 });
 
 burgerMenuListItems.forEach((item) => {
     item.addEventListener("mouseout", () => {
         item.classList.remove("list-item--active");
-    });
+    },{passive: true});
 });
 
 
