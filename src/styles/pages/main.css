@@ -36,7 +36,6 @@ header {
   justify-content: space-evenly;
   padding: 0;
   gap: 10px;
-  font-size: 14px;
   font-weight: 600;
 }
 .header__container .header__nav-container nav ul li {
