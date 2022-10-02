@@ -36,7 +36,7 @@ header {
   justify-content: space-evenly;
   padding: 0;
   gap: 10px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
 }
 .header__container .header__nav-container nav ul li {
@@ -50,6 +50,8 @@ header {
   display: flex;
   flex-direction: row-reverse;
   margin-bottom: 10px;
+  gap: 25px;
+  align-items: center;
 }
 .contacts ul {
   display: flex;
@@ -63,6 +65,25 @@ header {
 }
 .contacts li {
   list-style-image: url(../../assets/sprites/telephone.svg);
+}
+.contacts .header-logotypes {
+  display: flex;
+  gap: 10px;
+}
+.contacts .header-logotypes svg {
+  width: 30px;
+  height: 30px;
+}
+.contacts .header-logotypes .whatsapp {
+  fill: #44c554;
+}
+@media (max-width: 768px) {
+  .logo-container {
+    display: none;
+  }
+}
+.logo-container img {
+  filter: invert(61%) sepia(57%) saturate(2554%) hue-rotate(18deg) brightness(100%) contrast(103%);
 }
 
 main {
@@ -679,6 +700,15 @@ footer .container .item ul {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
+}
+.contacts-window__connect .contacts-window__icons-container .contacts-window__svg-contact {
+  width: 50px;
+  height: 50px;
+}
+.contacts-window__connect .contacts-window__icons-container .contacts-window__svg-contact--phone {
+  width: 40px;
+  height: 40px;
 }
 .contacts-window__connect .contacts-window__phone-container {
   display: flex;
@@ -688,6 +718,10 @@ footer .container .item ul {
   border-radius: 10px;
   border: 2px solid #f5f5f6;
   gap: 10px;
+}
+.contacts-window__connect .contacts-window__phone-container .contacts-window__vibration-icon {
+  width: 40px;
+  height: 40px;
 }
 
 .contacts-window__order-call .contacts-window__form {
