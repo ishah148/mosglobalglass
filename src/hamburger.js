@@ -1,4 +1,5 @@
 
+renderBurger()
 const hamburger = document.querySelector('.hamburger');
 const burgerMenuLinks = document.querySelectorAll('.burger-menu__link')
 const blackout = document.querySelector('.blackout');
@@ -56,4 +57,45 @@ burgerMenuListItems.forEach((item) => {
     },{passive: true});
 });
 
+function renderBurger(){
+    const root = document.getElementById('burger-menu')
+    root.insertAdjacentHTML('beforeend',generateBurgerHTML())
+}
 
+function generateBurgerHTML(){
+    return `
+    <div class="burger-menu">
+    <div class="burger-menu__logo">
+        <!-- <svg class="svg-icon burger-menu__svg" target="_blank">
+            <use xlink:href="../assets/svg/burger_sprite.svg#burger"></use>
+        </svg> -->
+        <!-- <img width ='50px' height='50px' class="burger-menu__svg" src="../assets/images/Farba_logo_w.svg" alt="logo"> -->
+    </div>
+    <div class="burger-menu__contacts">
+        <div class="contacts">
+            <ul>
+                <li>+74959914056</li>
+                <li>+79104458483</li>
+            </ul>
+        </div>
+    </div>
+    <nav class="burger-menu__content">
+        <ul class="burger-menu__list">
+            <li class="burger-menu__list-item">
+                <a class="burger-menu__link" href="#portfolio-section">Главная</a>
+            </li>
+            <li class="burger-menu__list-item">
+                <a class="burger-menu__link" href="#threeD-section">
+                    Стоимость замены</a>
+            </li>
+            <li class="burger-menu__list-item">
+                <a class="burger-menu__link" href="#video-section">Стоимость ремонта автостекла</a>
+            </li>
+            <li class="burger-menu__list-item">
+                <a class="burger-menu__link" href="#contacts-section">Контакты</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+    `
+}

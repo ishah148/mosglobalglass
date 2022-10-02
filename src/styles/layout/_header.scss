@@ -1,6 +1,7 @@
 header {
     width: 100%;
     background: var(--primary-grey);
+    
 }
 .header__container {
     max-width: var(--max-width);
@@ -20,11 +21,13 @@ header {
     .header__nav-container {
         display: flex;
         .logo-container {
-            @media (max-width: 600px) {
-                // display: none;
-                // position: absolute;
-                // top: 10px;
-                // left: 10px;
+            img{
+                margin-bottom: 30px;
+            }
+            @media (max-width: 868px) {
+                img{
+                    // width: 200px;
+                }
             }
         }
         nav {
@@ -38,8 +41,8 @@ header {
                 justify-content: space-evenly;
                 padding: 0;
                 gap: 10px;
-                // font-size: 16px;
-                font-weight: 600;
+                font-size: 18px;
+                // font-weight: 600;
                 li {
                     list-style-type: none;
                     a {
@@ -91,6 +94,7 @@ header {
     }
     img{
         filter: invert(61%) sepia(57%) saturate(2554%) hue-rotate(18deg) brightness(100%) contrast(103%);
+        -webkit-filter: invert(61%) sepia(57%) saturate(2554%) hue-rotate(18deg) brightness(100%) contrast(103%);
     }
 }
 

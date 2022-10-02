@@ -21,7 +21,7 @@ class TelegramSendMessage {
             },
             body: JSON.stringify({
                 chat_id: CHAT_ID,
-                text: ` Имя: ${msg[0]} \nНомер телефона : ${msg[1]} `,
+                text: ` Имя: ${msg[0]} \nНомер телефона : ${msg[1]} \nСообщение:${msg[2]}`,
             }),
         }
         const response = await fetch(URL, query);
@@ -49,7 +49,7 @@ class TelegramSendMessage {
         const thisClass = args[0]
         event.preventDefault();
         if (thisClass.checkValidSubmit(this.userNumber.value)) {
-            thisClass.telegramSendMsg(this.userName.value, this.userNumber.value)
+            thisClass.telegramSendMsg(this.userName.value, this.userNumber.value,this.userText.value)
         }
     }
 

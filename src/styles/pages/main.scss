@@ -16,6 +16,8 @@ a{
 }
 body{
     background: rgba($color: black, $alpha:0.9);
+    max-width: 1920px;
+    margin: auto;
 }
 ul{
     padding: 0;

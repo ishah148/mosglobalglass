@@ -6,14 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="preload" href="./assets/fonts/Montserrat-Medium.woff" as="font" type="font/woff2" crossorigin> 
-    <link rel="preload" href="./assets/fonts/Montserrat-Bold.woff" as="font" type="font/woff2" crossorigin> 
-    <link rel="preload" href="./assets/fonts/Montserrat-Light.woff" as="font" type="font/woff2" crossorigin> 
-    <link rel="preload" href="./assets/fonts/Montserrat-Regular.woff" as="font" type="font/woff2" crossorigin> 
+    <!-- <link rel="preload" href="assets/fonts/Montserrat-Medium.woff" as="font" type="font/woff2" crossorigin> 
+    <link rel="preload" href="assets/fonts/Montserrat-Bold.woff" as="font" type="font/woff2" crossorigin> 
+    <link rel="preload" href="assets/fonts/Montserrat-Light.woff" as="font" type="font/woff2" crossorigin> 
+    <link rel="preload" href="assets/fonts/Montserrat-Regular.woff" as="font" type="font/woff2" crossorigin>  -->
     <link rel="preconnect" href="http://127.0.0.1:5500" />
     <link rel="stylesheet" href="styles/pages/normalize.css">
     <link rel="stylesheet" href="styles/pages/main.css">
     <link rel="preload" as="image" href="assets/bg.webp">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&display=swap" rel="stylesheet" />
+    <!-- <style>
+        @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&display=swap);
+    </style> -->
 </head>
 
 <body>
@@ -29,7 +33,7 @@
                 <div class="hamburger__line"></div>
             </div>
             <div class="contacts">
-               
+
                 <div class="header-logotypes">
                     <a href="vk.com">
                         <svg class="">
@@ -54,11 +58,11 @@
             </div>
             <div class="header__nav-container">
                 <div class="logo-container">
-                    <img width ='250px' height='53px' src="./assets/logo.webp" alt="">
+                    <img width='250px' height='41px' src="./assets/logo.webp" alt="">
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="">Главная</a> </li>
+                        <li><a href="#">Главная</a> </li>
                         <li><a href="">Стоимость замены</a> </li>
                         <li><a href="">Стоимость ремонта автостекла</a> </li>
                         <li><a href="">Контакты</a> </li>
@@ -110,11 +114,12 @@
             </div>
         </div>
         <div class="call-me-container">
-            <button>Обратная связь</button>
+            <button id="feedback">Обратная связь</button>
         </div>
         <div class="main__maps"> <iframe
                 src="https://yandex.ru/map-widget/v1/?lang=ru_RU&amp;scroll=true&amp;um=constructor%3Af47ad683a024c0986c6c5a444cc063ae452f01e747aadfe37c82139fbd4a4875"
-                frameborder="0" allowfullscreen="true" width="100%" height="370px" style="display: block;"></iframe>
+                loading="lazy" frameborder="0" allowfullscreen="true" width="100%" height="370px"
+                style="display: block;"></iframe>
         </div>
 
     </main>
@@ -147,102 +152,9 @@
     </footer>
 
 
-    <div class="burger-menu">
-        <div class="burger-menu__logo">
-            <!-- <svg class="svg-icon burger-menu__svg" target="_blank">
-                <use xlink:href="../assets/svg/burger_sprite.svg#burger"></use>
-            </svg> -->
-            <!-- <img width ='50px' height='50px' class="burger-menu__svg" src="../assets/images/Farba_logo_w.svg" alt="logo"> -->
-        </div>
-        <div class="burger-menu__contacts">
-            <div class="contacts">
-                <ul>
-                    <li>+74959914056</li>
-                    <li>+79104458483</li>
-                </ul>
-            </div>
-        </div>
-        <nav class="burger-menu__content">
-            <ul class="burger-menu__list">
-                <li class="burger-menu__list-item">
-                    <a class="burger-menu__link" href="#portfolio-section">Главная</a>
-                </li>
-                <li class="burger-menu__list-item">
-                    <a class="burger-menu__link" href="#threeD-section">
-                        Стоимость замены</a>
-                </li>
-                <li class="burger-menu__list-item">
-                    <a class="burger-menu__link" href="#video-section">Стоимость ремонта автостекла</a>
-                </li>
-                <li class="burger-menu__list-item">
-                    <a class="burger-menu__link" href="#contacts-section">Контакты</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+    <div id="burger-menu"></div>
 
-    <div class="contacts-window__wrapper">
-        <div class="contacts-window__container">
-            <div class="contacts-window__connect">
-                <h2 class="contacts-window__h2">МЫ НА СВЯЗИ</h2>
-                <div class="contacts-window__icons-container">
-
-                    
-                    <a href="https://wa.me/%2B375259041736" target="_blank">
-                        <svg class="contacts-window__svg-contact">
-                            <use xlink:href="../src/assets/sprites/contactsSprite.svg#whatsapp"></use>
-                        </svg>
-                    </a>
-                    <a href="https://telegram.me/IgorTg123" target="_blank">
-                        <svg class="contacts-window__svg-contact">
-                            <use xlink:href="../src/assets/sprites/contactsSprite.svg#telegram"></use>
-                        </svg>
-                    </a>
-                    <a href="tel:+375259041736">
-                        <svg class="contacts-window__svg-contact contacts-window__svg-contact--phone">
-                            <use xlink:href="../src/assets/sprites/contactsSprite.svg#telephone-outbound"></use>
-                        </svg>
-                    </a>
-
-                </div>
-                <div class="contacts-window__phone-container">
-                    <svg class="contacts-window__vibration-icon">
-                        <use xlink:href="../src/assets/sprites/contactsSprite.svg#phone-vibrate"></use>
-                    </svg>
-                    <h2 class="contacts-window__h2">8945 123 132 13</h2>
-                    <!-- <h2 class="contacts-window__h2">8945 123 132 13</h2> -->
-                </div>
-            </div>
-            <div class="contacts-window__order-call">
-                <form method="post" id="contacts-window__form" class="contacts-window__form">
-
-                    <input type="text" name="userName" placeholder="Имя" />
-                    <input id="contacts-window__user-number" class="contacts-window__user-number" type="tel"
-                        name="userNumber" placeholder="Номер" min="8" max="25" />
-                    <button id="contacts-window__button-send" class="contacts-window__button-send">ЗАКАЗАТЬ
-                        ЗВОНОК</button>
-                </form>
-            </div>
-            <div class="contacts-window__text-me">
-                <h2 class="contacts-window__h2">НАПИСАТЬ</h2>
-                <a href="mailto:123@gmail.com" target="_blank">
-                    <div class="contacts-window__decorate-border-container"></div>
-                    <div class="contacts-window__border-test decore--up"></div>
-                    <div class="contacts-window__border-test decore--down"></div>
-                    <div class="contacts-window__border-main">123@gmail.com
-                    </div>
-                    <!-- <div class="contacts-window__border"></div>  -->
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <button class="contacts-window__callback-bt">
-        <div class="contacts-window__text-call">
-            <div class="fa fa-phone"></div>
-            <div class="text">МЫ НА<br>СВЯЗИ</div>
-        </div>
-    </button>
+    <div id="connect-window"></div>
 
     <!-- <script type="module" src="index.js"></script>
      -->
