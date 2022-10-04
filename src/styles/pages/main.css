@@ -343,13 +343,13 @@ footer .container .item__contact-list li {
 }
 
 .issues__container {
-  max-width: 1200px;
+  max-width: 900px;
   margin: auto;
 }
 .issues__container .issue__container {
   position: relative;
-  border: 1px solid red;
   z-index: 3;
+  margin-bottom: 25px;
 }
 .issues__container .issue__container * {
   pointer-events: none;
@@ -359,20 +359,26 @@ footer .container .item__contact-list li {
 }
 .issues__container .issue__container .issue {
   height: 50px;
+  padding: 0 var(--padding-primary);
   display: flex;
+  align-items: center;
+  background: var(--primary-grey);
   position: relative;
 }
 .issues__container .issue__container h5 {
   width: 100%;
+  padding: 0 var(--padding-primary);
   height: 0;
   overflow: hidden;
-  transition: all 0.3s;
+  transition: height 0.3s, background-color 0.3s;
+  display: flex;
+  align-items: center;
 }
 
 .issue__container.show h5 {
   height: 50px;
-  transition: all 0.3s;
-  background: greenyellow;
+  transition: height 0.3s, background-color 0.3s;
+  background: var(--primary-grey);
 }
 
 .accordion__arrow {
@@ -385,13 +391,14 @@ footer .container .item__contact-list li {
   width: 30px;
   height: 30px;
   text-align: center;
-  color: #fff;
+  color: var(--primary-orange);
+  box-sizing: content-box;
   line-height: 30px;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 500;
   margin-right: 5px;
-  background-color: #c9c9c9;
   border-radius: 50%;
+  border: 2px solid var(--primary-orange);
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
@@ -409,7 +416,8 @@ footer .container .item__contact-list li {
 }
 
 .accordion__item .accordion__arrow-item {
-  font-weight: 700;
+  font-weight: 500;
+  font-size: 10px;
 }
 
 :root {
