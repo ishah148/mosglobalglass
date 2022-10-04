@@ -52,7 +52,7 @@ header {
   display: flex;
   flex-direction: row-reverse;
   margin-bottom: 10px;
-  gap: 25px;
+  gap: 45px;
   align-items: center;
 }
 .contacts ul {
@@ -87,6 +87,14 @@ header {
 .logo-container img {
   filter: invert(61%) sepia(57%) saturate(2554%) hue-rotate(18deg) brightness(100%) contrast(103%);
   -webkit-filter: invert(61%) sepia(57%) saturate(2554%) hue-rotate(18deg) brightness(100%) contrast(103%);
+}
+
+@media (max-width: 416px) {
+  .header__working-time {
+    position: absolute;
+    font-size: 12px;
+    top: 50px;
+  }
 }
 
 main {
@@ -265,16 +273,22 @@ footer .container {
   font-size: 14px;
   justify-content: space-around;
   margin: auto;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   footer .container {
-    flex-direction: column;
-    gap: 25px;
+    max-width: 700px;
+    gap: 15px;
   }
 }
 footer .container .item {
-  width: 250px;
+  max-width: 250px;
+}
+@media (max-width: 1200px) {
+  footer .container .item {
+    width: 250px;
+  }
 }
 footer .container .item h3 {
   text-align: justify;
@@ -282,6 +296,45 @@ footer .container .item h3 {
 }
 footer .container .item ul {
   color: var(--primary-text);
+}
+footer .container .item__contact-list li {
+  list-style-image: url(../../assets/sprites/telephone.svg);
+}
+
+.advantages {
+  max-width: 1200px;
+  margin: auto;
+  padding: var(--padding-primary);
+}
+.advantages h1 {
+  margin: 20px 0;
+  color: var(--primary-orange);
+}
+.advantages p {
+  font-size: 20px;
+}
+
+.services {
+  padding: var(--padding-primary);
+}
+.services h1 {
+  margin-bottom: 40px;
+}
+
+.services-container {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(0, 0, 0, 0.431372549);
+}
+.services-container .restoration {
+  width: 314px;
+}
+.services-container .replacement {
+  width: 314px;
+}
+.services-container ul li {
+  font-size: 18px;
+  margin-top: 10px;
 }
 
 :root {

@@ -58,7 +58,7 @@ header {
     display: flex;
     flex-direction: row-reverse;
     margin-bottom: 10px;
-    gap: 25px;
+    gap: 45px;
     align-items: center;
     ul {
         display: flex;
@@ -98,3 +98,10 @@ header {
     }
 }
 
+.header__working-time{
+    @media (max-width: 416px ){
+        position: absolute;
+        font-size: 12px;
+        top: 50px;
+    }
+}

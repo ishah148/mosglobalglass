@@ -8,13 +8,18 @@ footer{
         font-size: 14px;
         justify-content: space-around;
         margin: auto;
-        align-items: center;
-        @media (max-width:768px ){
-            flex-direction: column;
-            gap: 25px;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        @media (max-width:1200px ){
+            // flex-direction: column;
+            max-width: 700px;
+            gap: 15px;
         }
         .item{
-            width: 250px;
+            max-width: 250px;
+            @media (max-width: 1200px ){
+                width: 250px;
+            }
             h3{
                 // text-align: center;
                 text-align: justify ;
@@ -23,6 +28,11 @@ footer{
             }
             ul{
                 color: var(--primary-text);
+            }    
+        }
+        .item__contact-list{
+            li {
+                list-style-image: url(../../assets/sprites/telephone.svg);
             }
         }
     }
