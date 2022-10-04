@@ -1,0 +1,15 @@
+.issues{
+    max-width: var(--max-width);
+}
+.issues__container{
+    max-width: 1200px;
+    margin: auto;
+    .issue{
+        display: flex;
+        position: relative;
+        margin-bottom: 25px;
+        h5{
+            // position: absolute;
+        }
+    }
+}
