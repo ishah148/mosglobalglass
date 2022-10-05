@@ -1,4 +1,4 @@
-$border-color: #f5f5f6;
+$border-color: var(--primary-orange);
 :root {
     --msg-window-width: 340px;
     --right-msg-window: 40px;
@@ -42,7 +42,7 @@ $border-color: #f5f5f6;
     right: -119px;
     bottom: -251px;
 
-    background: #1c313a;
+    background: var(--primary-grey);
     border-radius: 20px;
     transform: scale(0.01);
     transition: transform 0.3s, right 0.4s, bottom 0.4s;
@@ -63,6 +63,7 @@ $border-color: #f5f5f6;
 .contacts-window__h2 {
     text-align: center;
     font-size: 24px;
+    color: var(--primary-orange);
 }
 .contacts-window__connect {
     display: flex;
@@ -76,6 +77,7 @@ $border-color: #f5f5f6;
         .contacts-window__svg-contact {
             width: 50px;
             height: 50px;
+            fill: var(--primary-orange);
             &--phone {
                 width: 40px;
                 height: 40px;
@@ -175,7 +177,7 @@ $border-color: #f5f5f6;
         height: 33px;
         border: 2px solid white;
         border-radius: 10px;
-        background: #1c313a;
+        background: var(--primary-grey);
         text-align: center;
         font-size: 20px;
         text-align: center;

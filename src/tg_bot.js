@@ -1,5 +1,5 @@
 class TelegramSendMessage {
-    constructor(formID,inputId,buttonId) {
+    constructor(formID, inputId, buttonId) {
         this.formID = formID;
         this.form = document.getElementById(this.formID);
         this.input = document.getElementById(inputId)
@@ -18,24 +18,25 @@ class TelegramSendMessage {
             method: "POST",
             headers: {
                 "Content-Type": "application/json;charset=utf-8",
+                'Access-Control-Allow-Origin': '*',
             },
             body: JSON.stringify({
                 chat_id: CHAT_ID,
                 text: ` Имя: ${msg[0]} \nНомер телефона : ${msg[1]} \nСообщение:${msg[2]}`,
             }),
         }
-        const response = await fetch(URL, query);
         try {
-        } catch (e) { }
+            const response = await fetch(URL, query);
 
-        const status = await response.json();
-        // 
-        if (status.ok) {
-            this.sendDode()
-        }
-        if (!status.ok) {
-            this.sendErr()
-        }
+            const status = await response.json();
+            // 
+            if (status.ok) {
+                this.sendDode()
+            }
+            if (!status.ok) {
+                this.sendErr()
+            }
+        } catch (e) { this.sendErr() }
     }
 
     addEvents() {
@@ -47,16 +48,17 @@ class TelegramSendMessage {
     sumbit(...args) {
         const event = args[1]
         const thisClass = args[0]
+        console.log('', event)
         event.preventDefault();
         if (thisClass.checkValidSubmit(this.userNumber.value)) {
-            thisClass.telegramSendMsg(this.userName.value, this.userNumber.value,this.userText.value)
+            thisClass.telegramSendMsg(this.userName.value, this.userNumber.value, this.userText.value)
         }
     }
 
     //TODO
     checkValidPhone(e) {
         let number = e.target.value;
-        
+
         this.checkValidSubmit(number)
     }
     checkValidSubmit(number) {
@@ -84,11 +86,11 @@ class TelegramSendMessage {
             this.button.textContent = "ЗАКАЗАТЬ ЗВОНОК"
         }, 1500);
     }
-    
+
     incorrectInput() {
         this.input.classList.add('error')
     }
-    correctInput(){
+    correctInput() {
         this.input.classList.remove('error')
         this.input.classList.add('good')
     }
@@ -108,3 +110,4 @@ class TelegramSendMessage {
 }
 
 // const tg = new TelegramSendMessage("newForm", "newFormID");
+const tg = new TelegramSendMessage("contacts-window__form", "contacts-window__user-number", "contacts-window__button-send");

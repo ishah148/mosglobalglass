@@ -342,6 +342,7 @@ footer .container .item__contact-list li {
 
 .issues {
   max-width: var(--max-width);
+  padding: 0 var(--padding-primary);
 }
 .issues h2 {
   margin: 25px auto;
@@ -373,42 +374,21 @@ footer .container .item__contact-list li {
   position: relative;
 }
 .issues__container .issue__container .issue__answer {
+  padding: 20px;
   width: 100%;
   padding: 0 var(--padding-primary);
-  height: 0;
+  max-height: 0;
   overflow: hidden;
-  transition: height 0.3s, background-color 0.3s;
+  transition: all 0.3s;
   display: flex;
   align-items: center;
 }
 
 .issue__container.show .issue__answer {
-  height: 70px;
-  transition: height 0.3s, background-color 0.3s;
+  padding: 20px;
+  max-height: 270px;
+  transition: all 0.3s;
   background: rgba(52, 52, 52, 0.5);
-}
-@media (max-width: 768px) {
-  .issue__container.show .issue__answer {
-    height: 130px;
-  }
-}
-.issue__container.show .issue__answer.h100 {
-  height: 100px;
-}
-@media (max-width: 768px) {
-  .issue__container.show .issue__answer.h100 {
-    height: 150px;
-  }
-}
-@media (max-width: 425px) {
-  .issue__container.show .issue__answer.h100 {
-    height: 225px;
-  }
-}
-@media (max-width: 475px) {
-  .issue__container.show .issue__answer.hm280 {
-    height: 280px;
-  }
 }
 
 .accordion__arrow {
@@ -696,7 +676,7 @@ footer .container .item__contact-list li {
   position: absolute;
   right: -119px;
   bottom: -251px;
-  background: #1c313a;
+  background: var(--primary-grey);
   border-radius: 20px;
   transform: scale(0.01);
   transition: transform 0.3s, right 0.4s, bottom 0.4s;
@@ -720,6 +700,7 @@ footer .container .item__contact-list li {
 .contacts-window__h2 {
   text-align: center;
   font-size: 24px;
+  color: var(--primary-orange);
 }
 
 .contacts-window__connect {
@@ -736,6 +717,7 @@ footer .container .item__contact-list li {
 .contacts-window__connect .contacts-window__icons-container .contacts-window__svg-contact {
   width: 50px;
   height: 50px;
+  fill: var(--primary-orange);
 }
 .contacts-window__connect .contacts-window__icons-container .contacts-window__svg-contact--phone {
   width: 40px;
@@ -747,7 +729,7 @@ footer .container .item__contact-list li {
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  border: 2px solid #f5f5f6;
+  border: 2px solid var(--primary-orange);
   gap: 10px;
 }
 .contacts-window__connect .contacts-window__phone-container .contacts-window__vibration-icon {
@@ -826,7 +808,7 @@ footer .container .item__contact-list li {
   height: 33px;
   border: 2px solid white;
   border-radius: 10px;
-  background: #1c313a;
+  background: var(--primary-grey);
   text-align: center;
   font-size: 20px;
   text-align: center;
@@ -852,7 +834,7 @@ footer .container .item__contact-list li {
 .contacts-window__button {
   width: 50px;
   height: 50px;
-  border: 1px solid #f5f5f6;
+  border: 1px solid var(--primary-orange);
   border-radius: 50%;
   position: absolute;
   position: fixed;
