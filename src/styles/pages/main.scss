@@ -16,7 +16,7 @@ a{
 }
 body{
     background: rgba($color: black, $alpha:0.9);
-    max-width: 1920px;
+    // max-width: 1920px;
     margin: auto;
 }
 ul{
@@ -28,7 +28,10 @@ html{
     font-weight: 300;
     font-style: normal;
 }
-
+.test{
+    position: relative;
+    background: url(../../assets/bg.webp) center center/cover no-repeat;
+}
 
 //. Segoe Print ttf (400) WhatFontIs.com
 // sass --watch ./src/styles/main.scss:./src/styles/main.css

@@ -98,10 +98,7 @@ header {
 }
 
 main {
-  width: 100%;
   position: relative;
-  background: url(../../assets/bg.webp) center center/cover no-repeat;
-  max-width: 1920px;
   margin: auto;
 }
 main:before {
@@ -307,8 +304,8 @@ footer .container .item__contact-list li {
   margin: auto;
   padding: var(--padding-primary);
 }
-.advantages h2 {
-  margin: 20px 0;
+.advantages .advantages__header {
+  margin: 40px;
   color: var(--primary-orange);
   text-align: center;
 }
@@ -319,15 +316,17 @@ footer .container .item__contact-list li {
 
 .services {
   padding: var(--padding-primary);
+  background: rgba(0, 0, 0, 0.431372549);
 }
-.services h1 {
+.services h2 {
+  text-align: center;
   margin-bottom: 40px;
 }
 
 .services-container {
   display: flex;
-  justify-content: space-around;
-  background: rgba(0, 0, 0, 0.431372549);
+  justify-content: center;
+  gap: 75px;
 }
 .services-container .restoration {
   width: 314px;
@@ -1116,7 +1115,6 @@ a {
 
 body {
   background: rgba(0, 0, 0, 0.9);
-  max-width: 1920px;
   margin: auto;
 }
 
@@ -1129,6 +1127,11 @@ html {
   font-family: "Montserrat";
   font-weight: 300;
   font-style: normal;
+}
+
+.test {
+  position: relative;
+  background: url(../../assets/bg.webp) center center/cover no-repeat;
 }
 
 /*# sourceMappingURL=main.css.map */

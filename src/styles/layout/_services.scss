@@ -1,14 +1,17 @@
 .services{
     padding: var(--padding-primary);
-    h1{
+    background: rgba(0, 0, 0, 0.431372549);
+    h2{
+        text-align: center;
         margin-bottom: 40px;
     }
 }
 
 .services-container{
     display: flex;
-    justify-content: space-around;
-    background: rgba(0, 0, 0, 0.431372549);
+    justify-content: center;
+    gap: 75px;
+    // background: rgba(0, 0, 0, 0.431372549);
     .restoration{
         width: 314px;
     }
