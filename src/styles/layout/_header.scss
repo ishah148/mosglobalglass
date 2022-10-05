@@ -12,7 +12,7 @@ header {
     display: flex;
     flex-direction: column;
     position: relative;
-
+    min-height: 70px;
     @media (max-width: 768px) {
         flex-direction: row-reverse;
         justify-content: space-between;
