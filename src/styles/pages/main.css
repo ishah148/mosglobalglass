@@ -11,6 +11,7 @@ header {
   color: var(--primary-text);
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 @media (max-width: 768px) {
   .header__container {
@@ -25,27 +26,17 @@ header {
 .header__container .header__nav-container .logo-container img {
   margin-bottom: 30px;
 }
-.header__container .header__nav-container nav {
-  align-self: center;
-  flex: 3;
-}
-@media (max-width: 768px) {
-  .header__container .header__nav-container nav {
-    display: none;
+@media (min-width: 992px) {
+  .header__container .header__nav-container .logo-container {
+    position: absolute;
+    top: 15px;
+    left: 15px;
   }
 }
-.header__container .header__nav-container nav ul {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 0;
-  gap: 10px;
-  font-size: 18px;
-}
-.header__container .header__nav-container nav ul li {
-  list-style-type: none;
-}
-.header__container .header__nav-container nav ul li a {
-  color: var(--primary-text);
+@media (max-width: 992px) {
+  .header__container .header__nav-container .logo-container {
+    display: none;
+  }
 }
 
 .contacts {
@@ -54,6 +45,11 @@ header {
   margin-bottom: 10px;
   gap: 45px;
   align-items: center;
+}
+@media (max-width: 576px) {
+  .contacts {
+    gap: 20px;
+  }
 }
 .contacts ul {
   display: flex;
@@ -302,7 +298,7 @@ footer .container .item__contact-list li {
 .advantages {
   max-width: 1200px;
   margin: auto;
-  padding: var(--padding-primary);
+  padding: 25px;
 }
 .advantages .advantages__header {
   color: var(--primary-orange);
@@ -330,6 +326,7 @@ footer .container .item__contact-list li {
 .services-container {
   display: flex;
   justify-content: center;
+  padding: 25px;
   gap: 75px;
   flex-wrap: wrap;
   position: relative;
@@ -345,7 +342,12 @@ footer .container .item__contact-list li {
   top: 0;
   right: 50%;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
+  .services-container::before {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
   .services-container {
     gap: 25px;
   }

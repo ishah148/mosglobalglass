@@ -15,6 +15,7 @@
 .services-container{
     display: flex;
     justify-content: center;
+    padding: 25px;
     gap: 75px;
     // background: rgba(0, 0, 0, 0.431372549);
     flex-wrap: wrap;
@@ -29,8 +30,12 @@
         background: var(--primary-orange);
         top: 0;
         right: 50%;
+        @media (max-width: 768px){
+            display: none;
+            
+        }
     }
-    @media (max-width: 576px ){
+    @media (max-width: 768px ){
         gap: 25px;
     }
     .restoration{
