@@ -307,12 +307,14 @@ footer .container .item__contact-list li {
   margin: auto;
   padding: var(--padding-primary);
 }
-.advantages h1 {
+.advantages h2 {
   margin: 20px 0;
   color: var(--primary-orange);
+  text-align: center;
 }
 .advantages p {
   font-size: 20px;
+  text-align: justify;
 }
 
 .services {
@@ -341,6 +343,10 @@ footer .container .item__contact-list li {
 .issues {
   max-width: var(--max-width);
 }
+.issues h2 {
+  margin: 25px auto;
+  text-align: center;
+}
 
 .issues__container {
   max-width: 900px;
@@ -358,14 +364,15 @@ footer .container .item__contact-list li {
   opacity: 0.9;
 }
 .issues__container .issue__container .issue {
-  height: 50px;
+  height: 70px;
   padding: 0 var(--padding-primary);
+  padding-right: 45px;
   display: flex;
   align-items: center;
   background: var(--primary-grey);
   position: relative;
 }
-.issues__container .issue__container h5 {
+.issues__container .issue__container .issue__answer {
   width: 100%;
   padding: 0 var(--padding-primary);
   height: 0;
@@ -375,10 +382,33 @@ footer .container .item__contact-list li {
   align-items: center;
 }
 
-.issue__container.show h5 {
-  height: 50px;
+.issue__container.show .issue__answer {
+  height: 70px;
   transition: height 0.3s, background-color 0.3s;
-  background: var(--primary-grey);
+  background: rgba(52, 52, 52, 0.5);
+}
+@media (max-width: 768px) {
+  .issue__container.show .issue__answer {
+    height: 130px;
+  }
+}
+.issue__container.show .issue__answer.h100 {
+  height: 100px;
+}
+@media (max-width: 768px) {
+  .issue__container.show .issue__answer.h100 {
+    height: 150px;
+  }
+}
+@media (max-width: 425px) {
+  .issue__container.show .issue__answer.h100 {
+    height: 225px;
+  }
+}
+@media (max-width: 475px) {
+  .issue__container.show .issue__answer.hm280 {
+    height: 280px;
+  }
 }
 
 .accordion__arrow {

@@ -1,5 +1,9 @@
 .issues {
     max-width: var(--max-width);
+    h2{
+        margin: 25px auto;
+        text-align: center;
+    }
 }
 .issues__container {
     max-width: 900px;
@@ -15,22 +19,22 @@
             opacity: 0.9;
         }
         .issue {
-            height: 50px;
+            height: 70px;
             padding: 0 var(--padding-primary);
+            padding-right: 45px;
             display: flex;
             align-items: center;
             background: var(--primary-grey);
             position: relative;
             
         }
-        h5 {
+        .issue__answer {
             width: 100%;
             padding: 0 var(--padding-primary);
             // position: absolute;
             // z-index: -1;
             height: 0;
             overflow: hidden;
-            
             transition: height 0.3s,background-color 0.3s;
             display: flex;
             align-items: center;
@@ -38,11 +42,28 @@
     }
 }
 .issue__container.show {
-    h5 {
-        // pos
-        height: 50px;
+    .issue__answer {
+        @media (max-width: 768px) {
+            height: 130px;
+        }
+        height: 70px;
         transition: height 0.3s,background-color 0.3s;
-        background: var(--primary-grey);
+        background: rgb(52 52 52 / 50%);
+        &.h100{
+            height: 100px;
+            @media (max-width: 768px) {
+                height: 150px;
+            }
+            @media (max-width: 425px) {
+                height: 225px;
+            }
+        }
+        &.hm280{
+            @media (max-width: 475px) {
+                height: 280px;
+            }
+        }
+        
     }
 }
 
