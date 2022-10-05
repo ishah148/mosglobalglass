@@ -105,10 +105,10 @@ main:before {
   position: absolute;
   content: "";
   width: 20px;
-  height: 250px;
+  height: 390px;
   top: 150px;
   left: 5px;
-  border-radius: 10px;
+  border-radius: 0px;
   background: var(--primary-orange);
   z-index: 2;
 }
@@ -129,7 +129,6 @@ main p {
   z-index: 2;
 }
 main h1 {
-  padding-top: 25px;
   text-align: center;
 }
 main .main__service-list {
@@ -201,6 +200,7 @@ main li {
 }
 .main__service-types .service-item p {
   text-align: center;
+  font-size: 16px;
 }
 .main__service-types .service-item--center::before, .main__service-types .service-item--center::after {
   content: "";
@@ -305,9 +305,9 @@ footer .container .item__contact-list li {
   padding: var(--padding-primary);
 }
 .advantages .advantages__header {
-  margin: 40px;
   color: var(--primary-orange);
   text-align: center;
+  margin-bottom: 15px;
 }
 .advantages p {
   font-size: 20px;
@@ -322,11 +322,33 @@ footer .container .item__contact-list li {
   text-align: center;
   margin-bottom: 40px;
 }
+.services h3 {
+  text-align: center;
+  font-size: 20px;
+}
 
 .services-container {
   display: flex;
   justify-content: center;
   gap: 75px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.services-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 3px;
+  height: 100%;
+  border-radius: 3px;
+  background: var(--primary-orange);
+  top: 0;
+  right: 50%;
+}
+@media (max-width: 576px) {
+  .services-container {
+    gap: 25px;
+  }
 }
 .services-container .restoration {
   width: 314px;
@@ -336,7 +358,8 @@ footer .container .item__contact-list li {
 }
 .services-container ul li {
   font-size: 18px;
-  margin-top: 10px;
+  margin-top: 15px;
+  list-style: none;
 }
 
 .issues {
@@ -344,7 +367,7 @@ footer .container .item__contact-list li {
   padding: 0 var(--padding-primary);
 }
 .issues h2 {
-  margin: 25px auto;
+  margin: 40px auto;
   text-align: center;
 }
 
@@ -361,33 +384,37 @@ footer .container .item__contact-list li {
   pointer-events: none;
 }
 .issues__container .issue__container:hover {
-  opacity: 0.9;
+  opacity: 0.8;
+  cursor: pointer;
 }
 .issues__container .issue__container .issue {
-  height: 70px;
-  padding: 0 var(--padding-primary);
+  padding: 20px var(--padding-primary);
   padding-right: 45px;
   display: flex;
   align-items: center;
-  background: var(--primary-grey);
+  background: rgba(0, 0, 0, 0.431372549);
   position: relative;
 }
 .issues__container .issue__container .issue__answer {
   padding: 20px;
   width: 100%;
   padding: 0 var(--padding-primary);
+  font-size: 20px;
   max-height: 0;
   overflow: hidden;
   transition: all 0.3s;
   display: flex;
   align-items: center;
 }
+.issues__container .issue__container .issue__question {
+  font-size: 20px;
+}
 
 .issue__container.show .issue__answer {
   padding: 20px;
   max-height: 270px;
   transition: all 0.3s;
-  background: rgba(52, 52, 52, 0.5);
+  background: rgba(0, 0, 0, 0.33);
 }
 
 .accordion__arrow {
