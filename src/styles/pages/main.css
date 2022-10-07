@@ -721,6 +721,15 @@ footer .container .item__contact-list li {
   height: 594px;
   transform: scale(1);
 }
+@media (max-width: 375px) {
+  .contacts-window__container.open {
+    zoom: 0.8;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
 @media (max-width: 500px) {
   .contacts-window__container {
     padding: 30px 5px 0 5px;
