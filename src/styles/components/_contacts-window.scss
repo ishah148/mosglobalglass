@@ -55,10 +55,18 @@ $border-color: var(--primary-orange);
         width: var(--msg-window-width);
         height: 594px;
         transform: scale(1);
+        @media (max-width: 375px) {
+            zoom: 0.8;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
     }
     @media (max-width: 500px) {
         padding: 30px 5px 0 5px;
     }
+
 }
 .contacts-window__h2 {
     text-align: center;
