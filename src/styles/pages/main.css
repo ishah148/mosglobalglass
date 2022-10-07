@@ -10,56 +10,45 @@ header {
   font-weight: 500;
   color: var(--primary-text);
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
   position: relative;
+  min-height: 70px;
 }
-@media (max-width: 768px) {
-  .header__container {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-  }
+.header__container .header__logo-pic {
+  flex: 1;
 }
-.header__container .header__nav-container {
-  display: flex;
-}
-.header__container .header__nav-container .logo-container img {
-  margin-bottom: 30px;
-}
-@media (min-width: 992px) {
-  .header__container .header__nav-container .logo-container {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-  }
-}
-@media (max-width: 992px) {
-  .header__container .header__nav-container .logo-container {
+@media (max-width: 340px) {
+  .header__container .header__logo-pic {
     display: none;
   }
 }
-
+.header__container .header__logo-pic img {
+  width: 50px;
+  height: 50px;
+}
 .contacts {
+  flex: 1;
   display: flex;
   flex-direction: row-reverse;
   margin-bottom: 10px;
   gap: 45px;
   align-items: center;
 }
+@media (max-width: 992px) {
+  .contacts {
+    flex: auto;
+  }
+}
 @media (max-width: 576px) {
   .contacts {
     gap: 20px;
   }
 }
-.contacts ul {
+.contacts .header__phones-container {
   display: flex;
-  gap: 50px;
-}
-@media (max-width: 768px) {
-  .contacts ul {
-    flex-direction: column;
-    gap: 10px;
-  }
+  flex-direction: column;
+  gap: 10px;
 }
 .contacts li {
   list-style-image: url(../../assets/sprites/telephone.svg);
@@ -85,7 +74,10 @@ header {
   -webkit-filter: invert(61%) sepia(57%) saturate(2554%) hue-rotate(18deg) brightness(100%) contrast(103%);
 }
 
-@media (max-width: 416px) {
+.header__working-time {
+  max-height: 65px;
+}
+@media (max-width: 576px) {
   .header__working-time {
     position: absolute;
     font-size: 12px;
@@ -93,6 +85,16 @@ header {
   }
 }
 
+@media (max-width: 1250px) {
+  .header__container .logo-container {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .header__container .logo-container {
+    display: none;
+  }
+}
 main {
   position: relative;
   margin: auto;

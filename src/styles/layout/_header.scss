@@ -1,7 +1,6 @@
 header {
     width: 100%;
     background: var(--primary-grey);
-    
 }
 .header__container {
     max-width: var(--max-width);
@@ -10,107 +9,101 @@ header {
     font-weight: 500;
     color: var(--primary-text);
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
     position: relative;
+    min-height: 70px;
 
-    @media (max-width: 768px) {
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        align-items: center;
+    .header__logo-pic {
+        flex: 1;
+        @media (max-width: 340px) {
+            display: none;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+        }
     }
-
-
-    .header__nav-container {
-        display: flex;
         .logo-container {
-
-            img{
-                margin-bottom: 30px;
-            }
-            @media (min-width: 992px) {
-                position: absolute;
-                top: 15px;
-                left: 15px;
-            }
-            @media (max-width: 992px ){
-                display: none;
+            img {
+                // margin-bottom: 30px;
             }
         }
-        // nav {
-        //     align-self: center;
-        //     flex: 3;
-        //     @media (max-width: 768px) {
-        //         display: none;
-        //     }
-        //     ul {
-        //         display: flex;
-        //         justify-content: space-evenly;
-        //         padding: 0;
-        //         gap: 10px;
-        //         font-size: 18px;
-        //         // font-weight: 600;
-        //         li {
-        //             list-style-type: none;
-        //             a {
-        //                 color: var(--primary-text);
-        //             }
-        //         }
-        //     }
-        // }
-    }
+
 }
 
 .contacts {
+    flex: 1;
     display: flex;
     flex-direction: row-reverse;
     margin-bottom: 10px;
     gap: 45px;
     align-items: center;
-    @media (max-width: 576px ){
+    @media (max-width: 992px) {
+        flex: auto;
+    }
+    @media (max-width: 576px) {
         gap: 20px;
     }
-    ul {
+    .header__phones-container {
         display: flex;
-        gap: 50px;
+        flex-direction: column;
+        gap: 10px;
         @media (max-width: 768px) {
-            flex-direction: column;
-            gap: 10px;
         }
     }
     li {
         list-style-image: url(../../assets/sprites/telephone.svg);
     }
 
-    .header-logotypes{
+    .header-logotypes {
         display: flex;
         gap: 10px;
-        svg{
+        
+        svg {
             width: 30px;
             height: 30px;
         }
-        .whatsapp{
+        .whatsapp {
             fill: #44c554;
         }
-        img{
-
+        img {
         }
     }
 }
 
-.logo-container{
-    @media (max-width: 768px ){
+.logo-container {
+    @media (max-width: 768px) {
         display: none;
     }
-    img{
+    img {
         filter: invert(61%) sepia(57%) saturate(2554%) hue-rotate(18deg) brightness(100%) contrast(103%);
         -webkit-filter: invert(61%) sepia(57%) saturate(2554%) hue-rotate(18deg) brightness(100%) contrast(103%);
     }
 }
 
-.header__working-time{
-    @media (max-width: 416px ){
+.header__working-time {
+    max-height: 65px;
+    @media (max-width: 576px) {
         position: absolute;
         font-size: 12px;
         top: 50px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .header__container{
+       
+        .logo-container{
+            display: none;
+        }
+    }
+}
+@media (max-width: 992px) {
+    .header__container{
+       
+        .logo-container{
+            display: none;
+        }
     }
 }
