@@ -11,9 +11,9 @@ class TelegramSendMessage {
         this.addEvents()
     }
     async telegramSendMsg(...msg) {
-        // const TOKEN = "5361160702:AAGxhL7FLmkx1lhsLziBbqSpKkGZHickzL0";
+        const TOKEN = "5361160702:AAGxhL7FLmkx1lhsLziBbqSpKkGZHickzL0";
         // const CHAT_ID = "-1001704317062";
-        const TOKEN = "5744341470:AAEtvvW5czonXfe8hb9KUIVcKjjtAS1MxAA";
+        // const TOKEN = "5744341470:AAEtvvW5czonXfe8hb9KUIVcKjjtAS1MxAA";
         const CHAT_ID = "-1001869219973";
         const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
         const query = {
@@ -24,7 +24,7 @@ class TelegramSendMessage {
             },
             body: JSON.stringify({
                 chat_id: CHAT_ID,
-                text: ` Имя: ${msg[0]} \nНомер телефона : ${msg[1]} \nСообщение:${msg[2]}`,
+                text: ` Имя: ${msg[0]} \nНомер телефона : ${msg[1]} \nСообщение: ${msg[2]}`,
             }),
         }
         try {
