@@ -75,7 +75,7 @@ function generateCallMe() {
                 <input type="text" name="userName" placeholder="Имя" />
                 <input id="contacts-window__user-number" class="contacts-window__user-number" type="tel"
                 name="userNumber" placeholder="Номер" min="8" max="25" />
-                <input type="text" class='contacts-window__msg-text' name="userText" placeholder="Оставьте Ваше сообщение..." />
+                <textarea type="text" class='contacts-window__msg-text' name="userText" placeholder="Оставьте Ваше сообщение..." /></textarea>
                 <button id="contacts-window__button-send" class="contacts-window__button-send">ЗАКАЗАТЬ
                     ЗВОНОК</button>
             </form>

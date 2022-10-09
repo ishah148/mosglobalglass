@@ -813,6 +813,12 @@ footer .container .item__contact-list li {
 }
 .contacts-window__order-call .contacts-window__form .contacts-window__msg-text {
   height: 100px;
+  resize: none;
+  border-radius: 10px;
+}
+.contacts-window__order-call .contacts-window__form .contacts-window__msg-text:focus {
+  outline: none;
+  border: 3px solid var(--primary-orange);
 }
 .contacts-window__order-call .contacts-window__form input::-webkit-inner-spin-button {
   -webkit-appearance: none;
