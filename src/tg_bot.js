@@ -50,7 +50,6 @@ class TelegramSendMessage {
     sumbit(...args) {
         const event = args[1]
         const thisClass = args[0]
-        console.log('', event)
         event.preventDefault();
         if (thisClass.checkValidSubmit(this.userNumber.value)) {
             thisClass.telegramSendMsg(this.userName.value, this.userNumber.value, this.userText.value)

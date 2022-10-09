@@ -148,6 +148,12 @@ $border-color: var(--primary-orange);
         }
         .contacts-window__msg-text {
             height: 100px;
+            resize: none;
+            border-radius: 10px;
+            &:focus {
+                outline: none;
+                border: 3px solid var(--primary-orange);
+            }
         }
         input::-webkit-inner-spin-button {
             -webkit-appearance: none;
