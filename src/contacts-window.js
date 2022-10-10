@@ -44,17 +44,17 @@ function generateCallMe() {
             <div class="contacts-window__icons-container">
 
 
-                <a href="https://wa.me/%2B375259041736" target="_blank">
+                <a href="https://wa.me/%2B79854641804" target="_blank">
                     <svg class="contacts-window__svg-contact">
                         <use xlink:href="../src/assets/sprites/contactsSprite.svg#whatsapp"></use>
                     </svg>
                 </a>
-                <a href="https://telegram.me/IgorTg123" target="_blank">
+                <a href="https://telegram.me/mosglobalglass" target="_blank">
                     <svg class="contacts-window__svg-contact">
                         <use xlink:href="../src/assets/sprites/contactsSprite.svg#telegram"></use>
                     </svg>
                 </a>
-                <a href="tel:+375259041736">
+                <a href="tel:+79854641804">
                     <svg class="contacts-window__svg-contact contacts-window__svg-contact--phone">
                         <use xlink:href="../src/assets/sprites/contactsSprite.svg#telephone-outbound"></use>
                     </svg>
@@ -62,10 +62,12 @@ function generateCallMe() {
 
             </div>
             <div class="contacts-window__phone-container">
-                <svg class="contacts-window__vibration-icon">
-                    <use xlink:href="../src/assets/sprites/contactsSprite.svg#phone-vibrate"></use>
-                </svg>
-                <h2 class="contacts-window__h2">8945 123 132 13</h2>
+                <a href="tel:+79854641804">
+                    <svg class="contacts-window__vibration-icon">
+                        <use xlink:href="../src/assets/sprites/contactsSprite.svg#phone-vibrate"></use>
+                    </svg>
+                </a>
+                <h2 class="contacts-window__h2">+7985-464-18-04</h2>
                 <!-- <h2 class="contacts-window__h2">8945 123 132 13</h2> -->
             </div>
         </div>
@@ -82,11 +84,11 @@ function generateCallMe() {
         </div>
         <div class="contacts-window__text-me">
             <h2 class="contacts-window__h2">НАПИСАТЬ</h2>
-            <a href="mailto:123@gmail.com" target="_blank">
+            <a href="mailto:mosglobal-glass@yandex.ru" target="_blank">
                 <div class="contacts-window__decorate-border-container"></div>
                 <div class="contacts-window__border-test decore--up"></div>
                 <div class="contacts-window__border-test decore--down"></div>
-                <div class="contacts-window__border-main">123@gmail.com
+                <div class="contacts-window__border-main">mosglobal-glass@yandex.ru
                 </div>
                 <!-- <div class="contacts-window__border"></div>  -->
             </a>
