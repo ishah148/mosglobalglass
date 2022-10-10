@@ -233,6 +233,12 @@ main li {
 .main__maps--hidden {
   z-index: 0;
 }
+.main__maps iframe {
+  display: block;
+  width: 100%;
+  height: 370px;
+  border: none;
+}
 
 .call-me-container {
   margin: auto;

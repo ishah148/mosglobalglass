@@ -133,6 +133,12 @@ main {
     &--hidden{
         z-index: 0;
     }
+    iframe{
+        display: block;
+        width: 100%;
+        height: 370px;
+        border: none;
+    }
 }
 
 .call-me-container{
