@@ -309,6 +309,7 @@ footer .container .item__contact-list li {
   padding: 25px;
 }
 .advantages .advantages__header {
+  font-size: 32px;
   color: var(--primary-orange);
   text-align: center;
   margin-bottom: 15px;
