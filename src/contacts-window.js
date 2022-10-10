@@ -46,17 +46,17 @@ function generateCallMe() {
 
                 <a href="https://wa.me/%2B79854641804" target="_blank">
                     <svg class="contacts-window__svg-contact">
-                        <use xlink:href="../src/assets/sprites/contactsSprite.svg#whatsapp"></use>
+                        <use xlink:href="./assets/sprites/contactsSprite.svg#whatsapp"></use>
                     </svg>
                 </a>
                 <a href="https://telegram.me/mosglobalglass" target="_blank">
                     <svg class="contacts-window__svg-contact">
-                        <use xlink:href="../src/assets/sprites/contactsSprite.svg#telegram"></use>
+                        <use xlink:href="./assets/sprites/contactsSprite.svg#telegram"></use>
                     </svg>
                 </a>
                 <a href="tel:+79854641804">
                     <svg class="contacts-window__svg-contact contacts-window__svg-contact--phone">
-                        <use xlink:href="../src/assets/sprites/contactsSprite.svg#telephone-outbound"></use>
+                        <use xlink:href="./assets/sprites/contactsSprite.svg#telephone-outbound"></use>
                     </svg>
                 </a>
 
@@ -64,7 +64,7 @@ function generateCallMe() {
             <div class="contacts-window__phone-container">
                 <a href="tel:+79854641804">
                     <svg class="contacts-window__vibration-icon">
-                        <use xlink:href="../src/assets/sprites/contactsSprite.svg#phone-vibrate"></use>
+                        <use xlink:href="./assets/sprites/contactsSprite.svg#phone-vibrate"></use>
                     </svg>
                 </a>
                 <h2 class="contacts-window__h2">+7985-464-18-04</h2>
