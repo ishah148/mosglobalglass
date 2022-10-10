@@ -725,7 +725,7 @@ footer .container .item__contact-list li {
   bottom: 60px;
   transition: transform 0.3s, right 0.4s, bottom 0.4s;
   width: var(--msg-window-width);
-  height: 594px;
+  height: 600px;
   transform: scale(1);
 }
 @media (max-width: 375px) {
@@ -735,6 +735,7 @@ footer .container .item__contact-list li {
     right: 0;
     bottom: 0;
     margin: auto;
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 500px) {
