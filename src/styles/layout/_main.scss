@@ -33,6 +33,7 @@ main {
     }
     h1 {
         text-align: center;
+        padding: var(--padding-primary);
     }
     .main__service-list {
         margin-top: 20px;
