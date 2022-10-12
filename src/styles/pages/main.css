@@ -337,6 +337,9 @@ footer .container .item__contact-list li {
   padding-right: 65px;
   gap: 5px;
 }
+.services .services-container .issue__container {
+  background: var(--primary-grey);
+}
 .services .services-container .issue__question {
   flex: 5;
 }
@@ -350,7 +353,6 @@ footer .container .item__contact-list li {
   align-items: center;
   justify-content: center;
   padding: var(--padding-primary);
-  gap: 75px;
   flex-wrap: wrap;
   position: relative;
 }

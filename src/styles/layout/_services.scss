@@ -14,7 +14,10 @@
             padding-right: 65px;
             gap: 5px;
         }
-        .issue__question{
+        .issue__container {
+            background: var(--primary-grey);
+        }
+        .issue__question {
             flex: 5;
         }
         .issue__price {
@@ -30,7 +33,6 @@
     justify-content: center;
     // padding: 25px;
     padding: var(--padding-primary);
-    gap: 75px;
     // background: rgba(0, 0, 0, 0.431372549);
     flex-wrap: wrap;
     position: relative;
