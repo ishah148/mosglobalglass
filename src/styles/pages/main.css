@@ -129,6 +129,7 @@ main p {
 }
 main h1 {
   text-align: center;
+  padding: var(--padding-primary);
 }
 main .main__service-list {
   margin-top: 20px;
@@ -165,14 +166,15 @@ main li {
 }
 
 .main__service-types {
+  max-width: 1200px;
+  margin: auto;
   padding: 20px;
-  display: flex;
-  justify-content: center;
   gap: 35px;
   position: relative;
-  margin: auto;
+  display: flex;
+  justify-content: center;
 }
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .main__service-types {
     flex-direction: column;
     width: 300px;
@@ -192,6 +194,8 @@ main li {
   font-size: 14px;
   padding: 10px;
   position: relative;
+  height: 165px;
+  flex: 1;
 }
 .main__service-types .service-item h2 {
   text-align: center;
@@ -210,7 +214,7 @@ main li {
   border-radius: 3px;
   background: var(--primary-orange);
 }
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .main__service-types .service-item--center::before, .main__service-types .service-item--center::after {
     display: none;
   }
@@ -370,11 +374,6 @@ footer .container .item__contact-list li {
 @media (max-width: 768px) {
   .services-container::before {
     display: none;
-  }
-}
-@media (max-width: 768px) {
-  .services-container {
-    gap: 25px;
   }
 }
 .services-container .restoration {
