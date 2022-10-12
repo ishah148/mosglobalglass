@@ -46,6 +46,10 @@ $border-color: var(--primary-orange);
     border-radius: 20px;
     transform: scale(0.01);
     transition: transform 0.3s, right 0.4s, bottom 0.4s;
+    @media (max-width: 375px) {
+        gap: 20px;
+        height: 550px;
+    }
     &.open {
         position: absolute;
         z-index: 20; //TODO check!

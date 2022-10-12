@@ -18,7 +18,7 @@ header {
 .header__container .header__logo-pic {
   flex: 1;
 }
-@media (max-width: 340px) {
+@media (max-width: 575px) {
   .header__container .header__logo-pic {
     display: none;
   }
@@ -760,6 +760,12 @@ footer .container .item__contact-list li {
   border-radius: 20px;
   transform: scale(0.01);
   transition: transform 0.3s, right 0.4s, bottom 0.4s;
+}
+@media (max-width: 375px) {
+  .contacts-window__container {
+    gap: 20px;
+    height: 550px;
+  }
 }
 .contacts-window__container.open {
   position: absolute;
