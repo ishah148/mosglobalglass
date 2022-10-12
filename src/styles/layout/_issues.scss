@@ -9,42 +9,41 @@
 .issues__container {
     max-width: 900px;
     margin: auto;
-    .issue__container {
-        & * {
-            pointer-events: none;
-        }
+}
+
+.issue__container {
+    & * {
+        pointer-events: none;
+    }
+    position: relative;
+    z-index: 3;
+    margin-bottom: 25px;
+    &:hover {
+        opacity: 0.8;
+        transition: all 0.2s;
+        cursor: pointer;
+        -webkit-box-shadow: 4px 4px 8px 0px rgba(255, 144, 0, 0.1);
+        -moz-box-shadow: 4px 4px 8px 0px rgba(255, 144, 0, 0.1);
+        box-shadow: 4px 4px 8px 0px rgba(255, 144, 0, 0.1);
+    }
+    .issue {
+        padding: 20px var(--padding-primary);
+        padding-right: 45px;
+        display: flex;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.431372549);
         position: relative;
-        z-index: 3;
-        margin-bottom: 25px;
-        &:hover {
-            opacity: 0.8;
-            cursor: pointer;
-        }
-        .issue {
-            // height: 70px;
-            padding: 20px var(--padding-primary);
-            padding-right: 45px;
-            display: flex;
-            align-items: center;
-            // background: var(--primary-grey);
-            background: rgba(0, 0, 0, 0.431372549);
-            position: relative;
-        }
-        .issue__answer {
-            padding: 20px;
-            width: 100%;
-            padding: 0 var(--padding-primary);
-            font-size: 20px;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s;
-            // transition: height 0.3s,background-color 0.3s;
-            display: flex;
-            align-items: center;
-        }
-        .issue__question {
-            font-size: 20px;
-        }
+    }
+
+    .issue__answer {
+        padding: 20px;
+        width: 100%;
+        padding: 0 var(--padding-primary);
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
     }
 }
 .issue__container.show {
@@ -57,7 +56,19 @@
         background: rgba(0, 0, 0, 0.33);
     }
 }
-
+.issue__answer,
+.issue__question {
+    font-size: 20px;
+    @media (max-width: 345px) {
+        font-size: 14px;
+    }
+}
+.issue__price {
+    font-size: 20px;
+    @media (max-width: 345px) {
+        font-size: 10px;
+    }
+}
 .accordion__arrow {
     z-index: 2;
     position: absolute;
