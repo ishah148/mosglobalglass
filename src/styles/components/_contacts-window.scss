@@ -56,18 +56,16 @@ $border-color: var(--primary-orange);
         height: 600px;
         transform: scale(1);
         @media (max-width: 375px) {
-            zoom: 0.8;
+            transform: scale(0.8);
             left: 0;
             right: 0;
             bottom: 0;
             margin: auto;
-            margin-bottom: 30px;
         }
     }
     @media (max-width: 500px) {
         padding: 30px 5px 0 5px;
     }
-
 }
 .contacts-window__h2 {
     text-align: center;

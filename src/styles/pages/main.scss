@@ -1,34 +1,45 @@
-@use '../layout';
-@use '../base';
-@use '../components';
-*{
+@use "../layout";
+@use "../base";
+@use "../components";
+* {
     box-sizing: border-box;
 }
-a{
+a {
     text-decoration: none;
 }
-h1,h2,h3,h4,h5,h6,p{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     margin: 0;
-    color: var(--primary-text);  
-}
-a{
     color: var(--primary-text);
 }
-body{
-    background: rgba($color: black, $alpha:0.9);
+h1 {
+    @media (max-width: 768px) {
+        font-size: 24px;
+    }
+}
+a {
+    color: var(--primary-text);
+}
+body {
+    background: rgba($color: black, $alpha: 0.9);
     // max-width: 1920px;
     margin: auto;
 }
-ul{
+ul {
     padding: 0;
     margin: 0;
 }
-html{
-    font-family: 'Montserrat';
+html {
+    font-family: "Montserrat";
     font-weight: 300;
     font-style: normal;
 }
-.test{
+.test {
     position: relative;
     background: url(../../assets/bg.webp) center center/cover no-repeat;
 }
