@@ -21,7 +21,17 @@
             flex: 5;
         }
         .issue__price {
-            flex: 1;
+            flex: 1 1 100px;
+            text-align: end;
+        }
+        @media (max-width: 575px ){
+            .issue__question{
+                font-size: 16px;
+            }
+            .issue__price{
+                flex:2 1 18px;
+                font-size: 14px;
+            }
         }
     }
 }

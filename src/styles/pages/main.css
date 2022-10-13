@@ -351,7 +351,17 @@ footer .container .item__contact-list li {
   flex: 5;
 }
 .services .services-container .issue__price {
-  flex: 1;
+  flex: 1 1 100px;
+  text-align: end;
+}
+@media (max-width: 575px) {
+  .services .services-container .issue__question {
+    font-size: 16px;
+  }
+  .services .services-container .issue__price {
+    flex: 2 1 18px;
+    font-size: 14px;
+  }
 }
 
 .services-container {
