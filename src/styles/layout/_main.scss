@@ -55,6 +55,13 @@ main {
     li {
         align-self: start;
         color: var(--primary-text);
+        transition: color 0.2s;
+        a {
+            &:hover {
+                color: var(--primary-orange);
+                transition: color 0.2s;
+            }
+        }
     }
 }
 .main__blackout {
@@ -95,7 +102,7 @@ main {
         padding: 10px;
         position: relative;
         height: 165px;
-        flex:1;
+        flex: 1;
         h2 {
             text-align: center;
             margin-bottom: 10px;
