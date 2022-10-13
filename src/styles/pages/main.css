@@ -563,7 +563,7 @@ footer .container .item__contact-list li {
 .photos__container .photo__restope-container .restope-container__after {
   align-self: center;
   color: var(--primary-orange);
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 700;
 }
 .photos__container img {
