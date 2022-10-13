@@ -22,9 +22,9 @@
         opacity: 0.8;
         transition: all 0.2s;
         cursor: pointer;
-        -webkit-box-shadow: 4px 4px 8px 0px rgba(255, 144, 0, 0.1);
-        -moz-box-shadow: 4px 4px 8px 0px rgba(255, 144, 0, 0.1);
-        box-shadow: 4px 4px 8px 0px rgba(255, 144, 0, 0.1);
+        -webkit-box-shadow: 4px 4px 8px 0px rgba(255, 144, 0, 0.5);
+        -moz-box-shadow: 4px 4px 8px 0px rgba(255, 144, 0, 0.5);
+        box-shadow: 4px 4px 8px 0px rgba(255, 144, 0, 0.5);
     }
     .issue {
         padding: 20px var(--padding-primary);

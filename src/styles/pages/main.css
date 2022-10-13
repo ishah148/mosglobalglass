@@ -419,9 +419,9 @@ footer .container .item__contact-list li {
   opacity: 0.8;
   transition: all 0.2s;
   cursor: pointer;
-  -webkit-box-shadow: 4px 4px 8px 0px rgba(255, 144, 0, 0.1);
-  -moz-box-shadow: 4px 4px 8px 0px rgba(255, 144, 0, 0.1);
-  box-shadow: 4px 4px 8px 0px rgba(255, 144, 0, 0.1);
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(255, 144, 0, 0.5);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(255, 144, 0, 0.5);
+  box-shadow: 4px 4px 8px 0px rgba(255, 144, 0, 0.5);
 }
 .issue__container .issue {
   padding: 20px var(--padding-primary);
@@ -1240,11 +1240,12 @@ html {
   font-family: "Montserrat";
   font-weight: 300;
   font-style: normal;
+  scroll-behavior: smooth;
 }
 
 .test {
   position: relative;
-  background: url(../../assets/bg.webp) center center/cover no-repeat;
+  background: url(../../assets/bg_new.webp) center center/cover no-repeat;
 }
 
 /*# sourceMappingURL=main.css.map */
