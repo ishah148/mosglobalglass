@@ -1,0 +1,28 @@
+.photos__wrapper {
+    width: 100%;
+    background: var(-primary-grey);
+    padding: var(--padding-primary);
+}
+.photos__header {
+    margin: 25px;
+    text-align: center;
+}
+.photos__container {
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+    .photos__replace-container{
+        display: grid;
+        gap: 25px;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        img{
+            width: 100%;
+        }
+    }
+    @media (max-width: 768px ){
+        .photos__replace-container{
+            gap: 10px;
+        }
+    }
+}
