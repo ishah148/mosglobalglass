@@ -52,14 +52,14 @@
     }
     .restoration {
         width: 100%;
-        max-width: 1200px;
+        max-width: var(--max-width-container);
         margin: auto;
     }
 
     .replacement {
         // min-width: 314px;
         width: 100%;
-        max-width: 1200px;
+        max-width: var(--max-width-container);
         margin: auto;
     }
     ul {

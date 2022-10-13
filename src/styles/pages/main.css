@@ -169,7 +169,7 @@ main li a:hover {
 }
 
 .main__service-types {
-  max-width: 1200px;
+  max-width: var(--max-width-container);
   margin: auto;
   padding: 20px;
   gap: 35px;
@@ -286,7 +286,7 @@ footer .container {
   align-items: flex-start;
   flex-wrap: wrap;
 }
-@media (max-width: 1200px) {
+@media (max-width: var(--max-width-container)) {
   footer .container {
     max-width: 700px;
     gap: 15px;
@@ -295,7 +295,7 @@ footer .container {
 footer .container .item {
   max-width: 250px;
 }
-@media (max-width: 1200px) {
+@media (max-width: var(--max-width-container)) {
   footer .container .item {
     width: 250px;
   }
@@ -312,7 +312,7 @@ footer .container .item__contact-list li {
 }
 
 .advantages {
-  max-width: 1200px;
+  max-width: var(--max-width-container);
   margin: auto;
   padding: 25px;
   min-height: 189px;
@@ -381,12 +381,12 @@ footer .container .item__contact-list li {
 }
 .services-container .restoration {
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--max-width-container);
   margin: auto;
 }
 .services-container .replacement {
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--max-width-container);
   margin: auto;
 }
 .services-container ul li {
@@ -520,12 +520,12 @@ footer .container .item__contact-list li {
 }
 
 .photos__header {
-  margin: 25px;
+  margin-bottom: var(--padding-primary);
   text-align: center;
 }
 
 .photos__container {
-  max-width: 1200px;
+  max-width: var(--max-width-container);
   margin: auto;
   width: 100%;
 }
@@ -538,6 +538,24 @@ footer .container .item__contact-list li {
 .photos__container .photos__replace-container img {
   width: 100%;
 }
+.photos__container .photo__restope-container {
+  display: grid;
+  gap: 25px;
+  text-align: center;
+  grid-template-rows: 50px 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  padding: var(--padding-primary);
+}
+.photos__container .photo__restope-container .restope-container__before, .photos__container .photo__restope-container .restope-container__after {
+  align-self: center;
+  color: var(--primary-orange);
+  font-size: 20px;
+}
+.photos__container .photo__restope-container img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
 @media (max-width: 768px) {
   .photos__container .photos__replace-container {
     gap: 10px;
@@ -549,7 +567,7 @@ footer .container .item__contact-list li {
   --primary-grey: #343434;
   --primary-text: #f0f0f0;
   --max-width: 100%;
-  --max-width-container: 1200px;
+  --max-width-container: 1440px;
   --padding-primary: 40px;
 }
 

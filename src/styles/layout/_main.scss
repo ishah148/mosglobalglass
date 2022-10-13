@@ -75,7 +75,7 @@ main {
     -webkit-backdrop-filter: blur(9px) brightness(0.4);
 }
 .main__service-types {
-    max-width: 1200px;
+    max-width: var(--max-width-container);
     margin: auto;
     padding: 20px;
     gap: 35px;
