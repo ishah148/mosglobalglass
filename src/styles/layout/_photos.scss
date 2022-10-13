@@ -28,7 +28,8 @@
         grid-template-columns: 1fr 1fr;
         padding: var(--padding-primary);
         // grid-template-areas: ;
-        .restope-container__before,.restope-container__after {
+        .restope-container__before,
+        .restope-container__after {
             align-self: center;
             color: var(--primary-orange);
             font-size: 28px;
@@ -36,14 +37,16 @@
         }
         .photos__restope-photo {
         }
-        img {
-            width: 100%;
-            aspect-ratio: 1/1;
-            object-fit: cover;
-        }
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
     }
     @media (max-width: 768px) {
-        .photos__replace-container,.photo__restope-container {
+        .photos__replace-container,
+        .photo__restope-container {
             gap: 10px;
         }
     }

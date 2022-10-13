@@ -546,19 +546,22 @@ footer .container .item__contact-list li {
   grid-template-columns: 1fr 1fr;
   padding: var(--padding-primary);
 }
-.photos__container .photo__restope-container .restope-container__before, .photos__container .photo__restope-container .restope-container__after {
+.photos__container .photo__restope-container .restope-container__before,
+.photos__container .photo__restope-container .restope-container__after {
   align-self: center;
   color: var(--primary-orange);
   font-size: 28px;
   font-weight: 700;
 }
-.photos__container .photo__restope-container img {
+.photos__container img {
   width: 100%;
+  height: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
 }
 @media (max-width: 768px) {
-  .photos__container .photos__replace-container, .photos__container .photo__restope-container {
+  .photos__container .photos__replace-container,
+.photos__container .photo__restope-container {
     gap: 10px;
   }
 }
