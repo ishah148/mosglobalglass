@@ -571,6 +571,7 @@ footer .container .item__contact-list li {
   height: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
+  filter: brightness(0.9);
 }
 @media (max-width: 768px) {
   .photos__container .photos__replace-container,
