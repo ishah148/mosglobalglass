@@ -358,6 +358,9 @@ footer .container .item__contact-list li {
   .services .services-container .issue__question {
     font-size: 16px;
   }
+  .services .services-container .issue__answer {
+    font-size: 16px;
+  }
   .services .services-container .issue__price {
     flex: 2 1 18px;
     font-size: 14px;
@@ -459,7 +462,7 @@ footer .container .item__contact-list li {
 
 .issue__container.show .issue__answer {
   padding: 20px;
-  max-height: 270px;
+  max-height: 570px;
   transition: all 0.3s;
   background: rgba(0, 0, 0, 0.33);
 }
