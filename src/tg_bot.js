@@ -1,4 +1,4 @@
-class TelegramSendMessage {
+export class TelegramSendMessage {
     constructor(formID, inputId, buttonId) {
         this.formID = formID;
         this.form = document.getElementById(this.formID);
@@ -111,4 +111,3 @@ class TelegramSendMessage {
 }
 
 // const tg = new TelegramSendMessage("newForm", "newFormID");
-const tg = new TelegramSendMessage("contacts-window__form", "contacts-window__user-number", "contacts-window__button-send");

@@ -1,42 +1,43 @@
-// // function messageWindowEvents(){}
-const blackOut = document.querySelector('.blackout');
-const root = document.getElementById('connect-window')
-feedbackBtn = document.getElementById('feedback')
-root.insertAdjacentHTML('beforeend',generateCallMe())
-const msgSelectors = [
-    ".contacts-window__container",
-    ".contacts-window__wrapper",
-];
+export function start() {
+    // // function messageWindowEvents(){}
+    const blackOut = document.querySelector('.blackout');
+    const root = document.getElementById('connect-window')
+    const feedbackBtn = document.getElementById('feedback')
+    root.insertAdjacentHTML('beforeend', generateCallMe())
+    const msgSelectors = [
+        ".contacts-window__container",
+        ".contacts-window__wrapper",
+    ];
 
-document.querySelector(".contacts-window__callback-bt").onclick = openMessageWindow;
-feedbackBtn.onclick = openMessageWindow;
-function openMessageWindow() {
-    this.classList.add('hidden')
-    hiddenMaps()
-    msgSelectors.forEach((selector) =>
-        document.querySelector(selector).classList.toggle("open")
-    );
-    blackOut.classList.toggle("visible");
-    document.querySelector(".contacts-window__wrapper").addEventListener('click', (e) => {
-        if (e.target.classList.contains('contacts-window__wrapper')) closeMessageWindow()
-    }, { passive: true })
-}
-function closeMessageWindow() {
-    document.querySelector(".contacts-window__callback-bt").classList.remove('hidden')
-    showMaps()
-    msgSelectors.forEach((selector) =>
-        document.querySelector(selector).classList.remove("open")
-    );
-    blackOut.classList.remove("visible");
-    document.querySelector(".contacts-window__wrapper").removeEventListener('click', closeMessageWindow)
-}
+    document.querySelector(".contacts-window__callback-bt").onclick = openMessageWindow;
+    feedbackBtn.onclick = openMessageWindow;
+    function openMessageWindow() {
+        this.classList.add('hidden')
+        hiddenMaps()
+        msgSelectors.forEach((selector) =>
+            document.querySelector(selector).classList.toggle("open")
+        );
+        blackOut.classList.toggle("visible");
+        document.querySelector(".contacts-window__wrapper").addEventListener('click', (e) => {
+            if (e.target.classList.contains('contacts-window__wrapper')) closeMessageWindow()
+        }, { passive: true })
+    }
+    function closeMessageWindow() {
+        document.querySelector(".contacts-window__callback-bt").classList.remove('hidden')
+        showMaps()
+        msgSelectors.forEach((selector) =>
+            document.querySelector(selector).classList.remove("open")
+        );
+        blackOut.classList.remove("visible");
+        document.querySelector(".contacts-window__wrapper").removeEventListener('click', closeMessageWindow)
+    }
 
-blackOut.addEventListener("click", () => {
-    closeMessageWindow();
-}, { passive: true });
+    blackOut.addEventListener("click", () => {
+        closeMessageWindow();
+    }, { passive: true });
 
-function generateCallMe() {
-    return `
+    function generateCallMe() {
+        return `
     <div class="contacts-window__wrapper">
     <div class="contacts-window__container">
         <div class="contacts-window__connect">
@@ -103,12 +104,14 @@ function generateCallMe() {
     </div>
 </button>
     `
-}
+    }
 
 
-function showMaps(){
-    document.querySelector('.main__maps').classList.remove('main__maps--hidden')
-}
-function hiddenMaps(){
-    document.querySelector('.main__maps').classList.add('main__maps--hidden')
+    function showMaps() {
+        document.querySelector('.main__maps').classList.remove('main__maps--hidden')
+    }
+    function hiddenMaps() {
+        document.querySelector('.main__maps').classList.add('main__maps--hidden')
+    }
+
 }
