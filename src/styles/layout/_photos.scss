@@ -31,7 +31,8 @@
         .restope-container__before,.restope-container__after {
             align-self: center;
             color: var(--primary-orange);
-            font-size: 20px;
+            font-size: 28px;
+            font-weight: 700;
         }
         .photos__restope-photo {
         }
@@ -42,7 +43,7 @@
         }
     }
     @media (max-width: 768px) {
-        .photos__replace-container {
+        .photos__replace-container,.photo__restope-container {
             gap: 10px;
         }
     }

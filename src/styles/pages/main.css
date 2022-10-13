@@ -549,7 +549,8 @@ footer .container .item__contact-list li {
 .photos__container .photo__restope-container .restope-container__before, .photos__container .photo__restope-container .restope-container__after {
   align-self: center;
   color: var(--primary-orange);
-  font-size: 20px;
+  font-size: 28px;
+  font-weight: 700;
 }
 .photos__container .photo__restope-container img {
   width: 100%;
@@ -557,7 +558,7 @@ footer .container .item__contact-list li {
   object-fit: cover;
 }
 @media (max-width: 768px) {
-  .photos__container .photos__replace-container {
+  .photos__container .photos__replace-container, .photos__container .photo__restope-container {
     gap: 10px;
   }
 }
