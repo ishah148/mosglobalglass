@@ -32,7 +32,7 @@
     <meta name="yandex-verification" content="40fe1dce431a5c42">
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,regular,500,600,700&display=swap"
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,regular,500,600,700&display=swap&subset=cyrillic"
         rel="stylesheet">
 
     <!-- <link rel="icon" sizes="192x192"
@@ -46,6 +46,8 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="styles/pages/main.css" as="style">
+    <link rel="preload" href="styles/pages/normalize.css" as="style">
     <link rel="stylesheet" href="styles/pages/normalize.css">
     <link rel="stylesheet" href="styles/pages/main.css">
     <link rel="preload" as="image" href="assets/bg.webp">
@@ -104,7 +106,7 @@
     <main>
         <div class="test">
             <div class="main__blackout"></div>
-
+            <img src="./assets/bg_new.webp" alt="logo">
             <div class="main__service">
                 <h1>
                     Автостекла <br>
@@ -260,33 +262,7 @@
             </div>
         </section>
 
-        <section class="photos__wrapper">
-            <h2 class="photos__header">Примеры работ</h2>
-            <div class="photos__container">
-                <div class="photos__replace-container">
-                    <div class="photos__replace-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/work_examples/62508.webp" alt="car-photo"></div>
-                    <div class="photos__replace-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/work_examples/70859.webp" alt="car-photo"></div>
-                    <div class="photos__replace-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/work_examples/IMG_4029.webp" alt="car-photo"></div>
-                    <div class="photos__replace-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/work_examples/88178.webp" alt="car-photo"></div>
-                </div>
-                <div class="photo__restope-container">
-                    <p class="restope-container__before">До</p>
-                    <p class="restope-container__after">После</p>
-                    <div class="photos__restope-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/skols/1.webp" alt="car-photo"></div>
-                    <div class="photos__restope-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/skols/2.webp" alt="car-photo"></div>
-                    <div class="photos__restope-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/skols/3.webp" alt="car-photo"></div>
-                    <div class="photos__restope-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/skols/4.webp" alt="car-photo"></div>
-                </div>
-            </div>
-        </section>
+        <div id="photos-wrapper"></div>
 
         <section class="issues">
             <div class="issues__container">
@@ -452,11 +428,9 @@
             </div>
         </section>
 
-        <div class="main__maps">
+        <div id="ya-maps" class="main__maps">
 
-            <!-- <iframe
-                src="https://yandex.ru/map-widget/v1/?um=constructor%3A889e3511d7b7d2b56b4b5719270c7ccc293d2c2b47192026eb39cfeb71a7f284&amp;source=constructor"
-                loading="lazy"></iframe> -->
+
         </div>
 
 
@@ -505,7 +479,7 @@
     <div id="connect-window"></div>
 
     <script type="module" src="index.js"></script>
-     
+
     <!-- <script defer src="hamburger.js"></script> -->
     <!-- <script defer src="contacts-window.js"></script>
     <script defer src="tg_bot.js"></script>
