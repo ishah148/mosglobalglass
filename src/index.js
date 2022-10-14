@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const telegram = await import("./tg_bot.js");
     const contact = await import("./contacts-window.js");
     const issues = await import("./issues.js");
-    contact.start();
     issues.start();
+    contact.start();
     const tg = new telegram.TelegramSendMessage("contacts-window__form", "contacts-window__user-number", "contacts-window__button-send");
     document.getElementById('ya-maps').insertAdjacentHTML('beforeend', getYaMapsHTML())
     document.getElementById('photos-wrapper').insertAdjacentHTML('beforeend', getPhotosHTML())
@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 function getYaMapsHTML() {
     return `
     <iframe
+        title="maps"
         src="https://yandex.ru/map-widget/v1/?um=constructor%3A889e3511d7b7d2b56b4b5719270c7ccc293d2c2b47192026eb39cfeb71a7f284&amp;source=constructor"
         loading="lazy">      
     </iframe>

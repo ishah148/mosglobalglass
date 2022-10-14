@@ -45,17 +45,17 @@ export function start() {
             <div class="contacts-window__icons-container">
 
 
-                <a href="https://wa.me/%2B79854641804" target="_blank">
+                <a href="https://wa.me/%2B79854641804" target="_blank" aria-label="wa">
                     <svg class="contacts-window__svg-contact">
                         <use xlink:href="./assets/sprites/contactsSprite.svg#whatsapp"></use>
                     </svg>
                 </a>
-                <a href="https://telegram.me/mosglobalglass" target="_blank">
+                <a href="https://telegram.me/mosglobalglass" target="_blank" aria-label="tg">
                     <svg class="contacts-window__svg-contact">
                         <use xlink:href="./assets/sprites/contactsSprite.svg#telegram"></use>
                     </svg>
                 </a>
-                <a href="tel:+79854641804">
+                <a href="tel:+79854641804" aria-label="Phone">
                     <svg class="contacts-window__svg-contact contacts-window__svg-contact--phone">
                         <use xlink:href="./assets/sprites/contactsSprite.svg#telephone-outbound"></use>
                     </svg>
@@ -63,7 +63,7 @@ export function start() {
 
             </div>
             <div class="contacts-window__phone-container">
-                <a href="tel:+79854641804">
+                <a href="tel:+79854641804" aria-label="Phone">
                     <svg class="contacts-window__vibration-icon">
                         <use xlink:href="./assets/sprites/contactsSprite.svg#phone-vibrate"></use>
                     </svg>
