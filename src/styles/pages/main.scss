@@ -29,11 +29,6 @@ body {
     background: rgba($color: black, $alpha: 0.9);
     // max-width: 1920px;
     margin: auto;
-    &::after {
-        position: relative;
-        z-index: -1;
-        content: url(../../assets/bg.webp);
-    }
 }
 ul {
     padding: 0;
