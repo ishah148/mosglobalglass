@@ -42,10 +42,10 @@ function getPhotosHTML() {
                             src="./assets/skols/2.webp" alt="car-photo"></div>
                     <div class="photos__restope-photo"><img loading="lazy" width="600" height="450"
                             src="./assets/skols/1.webp" alt="car-photo"></div>
+                     <div class="photos__restope-photo"><img loading="lazy" width="600" height="450"
+                            src="./assets/skols/4.webp" alt="car-photo"></div>
                     <div class="photos__restope-photo"><img loading="lazy" width="600" height="450"
                             src="./assets/skols/3.webp" alt="car-photo"></div>
-                    <div class="photos__restope-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/skols/4.webp" alt="car-photo"></div>
                 </div>
             </div>
         </section>
