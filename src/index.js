@@ -39,9 +39,9 @@ function getPhotosHTML() {
                     <p class="restope-container__before">До</p>
                     <p class="restope-container__after">После</p>
                     <div class="photos__restope-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/skols/1.webp" alt="car-photo"></div>
-                    <div class="photos__restope-photo"><img loading="lazy" width="600" height="450"
                             src="./assets/skols/2.webp" alt="car-photo"></div>
+                    <div class="photos__restope-photo"><img loading="lazy" width="600" height="450"
+                            src="./assets/skols/1.webp" alt="car-photo"></div>
                     <div class="photos__restope-photo"><img loading="lazy" width="600" height="450"
                             src="./assets/skols/3.webp" alt="car-photo"></div>
                     <div class="photos__restope-photo"><img loading="lazy" width="600" height="450"
