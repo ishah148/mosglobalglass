@@ -3,13 +3,33 @@ document.addEventListener('DOMContentLoaded', async () => {
     const telegram = await import("./tg_bot.js");
     const contact = await import("./contacts-window.js");
     const issues = await import("./issues.js");
+    const fullSize = await import("./FullSizeViewer.js")
     issues.start();
     contact.start();
     const tg = new telegram.TelegramSendMessage("contacts-window__form", "contacts-window__user-number", "contacts-window__button-send");
-    document.getElementById('ya-maps').insertAdjacentHTML('beforeend', getYaMapsHTML())
-    document.getElementById('photos-wrapper').insertAdjacentHTML('beforeend', getPhotosHTML())
+    renderMaps();
+    renderPhotos();
+    handleFullSizeEvents(fullSize);
 })
 
+function handleFullSizeEvents(fsModule) {
+    const fullSize = fsModule;
+    document.querySelectorAll('.photos__replace-container img').forEach(i => i.addEventListener('click', () => {
+        const number = i.dataset.number
+        const fs = new fullSize.FullSizeViewer(number, "./assets/work_examples_full")
+    }))
+    document.querySelectorAll('.photo__restope-container img').forEach(i => i.addEventListener('click', () => {
+        const number = i.dataset.number
+        const fs = new fullSize.FullSizeViewer(number, "./assets/skols_full")
+    }))
+}
+function renderMaps(){
+    document.getElementById('ya-maps').insertAdjacentHTML('beforeend', getYaMapsHTML())
+}
+
+function renderPhotos(){
+    document.getElementById('photos-wrapper').insertAdjacentHTML('beforeend', getPhotosHTML())
+}
 function getYaMapsHTML() {
     return `
     <iframe
@@ -19,7 +39,6 @@ function getYaMapsHTML() {
     </iframe>
     `
 }
-
 function getPhotosHTML() {
     return `
     <section class="photos__wrapper">
@@ -27,27 +46,48 @@ function getPhotosHTML() {
             <div class="photos__container">
                 <div class="photos__replace-container">
                     <div class="photos__replace-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/work_examples/62508.webp" alt="car-photo"></div>
+                            src="./assets/work_examples/1.webp" alt="car-photo" data-number="1" ></div>
                     <div class="photos__replace-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/work_examples/70859.webp" alt="car-photo"></div>
+                            src="./assets/work_examples/2.webp" alt="car-photo" data-number="2"></div>
                     <div class="photos__replace-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/work_examples/IMG_4029.webp" alt="car-photo"></div>
+                            src="./assets/work_examples/3.webp" alt="car-photo" data-number="3"></div>
                     <div class="photos__replace-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/work_examples/88178.webp" alt="car-photo"></div>
+                            src="./assets/work_examples/4.webp" alt="car-photo" data-number="4" ></div>
                 </div>
                 <div class="photo__restope-container">
                     <p class="restope-container__before">До</p>
                     <p class="restope-container__after">После</p>
                     <div class="photos__restope-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/skols/2.webp" alt="car-photo"></div>
+                            src="./assets/skols/2.webp" alt="car-photo"data-number="1"></div>
                     <div class="photos__restope-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/skols/1.webp" alt="car-photo"></div>
+                            src="./assets/skols/1.webp" alt="car-photo"data-number="2"></div>
                      <div class="photos__restope-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/skols/4.webp" alt="car-photo"></div>
+                            src="./assets/skols/4.webp" alt="car-photo"data-number="3"></div>
                     <div class="photos__restope-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/skols/3.webp" alt="car-photo"></div>
+                            src="./assets/skols/3.webp" alt="car-photo"data-number="4"></div>
                 </div>
             </div>
+            <div class="modal-window__wrapper">
+            <div class="modal-window__mouse area-left">
+                <button class="modal-window__left-button">
+                    <svg class="modal-window__arrow-left">
+                        <use xlink:href="./assets/svg/sprite.svg#arrow-left"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-window__mouse area-right">
+                <button class="modal-window__right-button">
+                    <svg class="modal-window__arrow-right">
+                        <use xlink:href="./assets/svg/sprite.svg#arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+            <button class="modal-window__close-button main">
+                <svg class="modal-window__cross">
+                    <use xlink:href="./assets/svg/sprite.svg#cross"></use>
+                </svg>
+            </button>
+        </div>
         </section>
     `
 }

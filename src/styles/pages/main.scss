@@ -29,6 +29,9 @@ body {
     background: rgba($color: black, $alpha: 0.9);
     // max-width: 1920px;
     margin: auto;
+    &.stop-scrolling{
+        overflow: hidden;
+    }
 }
 ul {
     padding: 0;
