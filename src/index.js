@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     issues.start();
     contact.start();
     const tg = new telegram.TelegramSendMessage("contacts-window__form", "contacts-window__user-number", "contacts-window__button-send");
-    document.getElementById('ya-maps').insertAdjacentHTML('beforeend', getYaMapsHTML())
-    document.getElementById('photos-wrapper').insertAdjacentHTML('beforeend', getPhotosHTML())
+    renderMaps();
+    renderPhotos();
     handleFullSizeEvents(fullSize);
 })
 
@@ -23,7 +23,13 @@ function handleFullSizeEvents(fsModule) {
         const fs = new fullSize.FullSizeViewer(number, "./assets/skols_full")
     }))
 }
+function renderMaps(){
+    document.getElementById('ya-maps').insertAdjacentHTML('beforeend', getYaMapsHTML())
+}
 
+function renderPhotos(){
+    document.getElementById('photos-wrapper').insertAdjacentHTML('beforeend', getPhotosHTML())
+}
 function getYaMapsHTML() {
     return `
     <iframe
@@ -33,7 +39,6 @@ function getYaMapsHTML() {
     </iframe>
     `
 }
-
 function getPhotosHTML() {
     return `
     <section class="photos__wrapper">
@@ -41,13 +46,13 @@ function getPhotosHTML() {
             <div class="photos__container">
                 <div class="photos__replace-container">
                     <div class="photos__replace-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/work_examples/1.webp" alt="car-photo" data-folder="./assets/work_examples_full" data-number="1" ></div>
+                            src="./assets/work_examples/1.webp" alt="car-photo" data-number="1" ></div>
                     <div class="photos__replace-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/work_examples/2.webp" alt="car-photo" data-folder="./assets/work_examples_full" data-number="2"></div>
+                            src="./assets/work_examples/2.webp" alt="car-photo" data-number="2"></div>
                     <div class="photos__replace-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/work_examples/3.webp" alt="car-photo" data-folder="./assets/work_examples_full" data-number="3"></div>
+                            src="./assets/work_examples/3.webp" alt="car-photo" data-number="3"></div>
                     <div class="photos__replace-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/work_examples/4.webp" alt="car-photo" data-folder="./assets/work_examples_full" data-number="4" ></div>
+                            src="./assets/work_examples/4.webp" alt="car-photo" data-number="4" ></div>
                 </div>
                 <div class="photo__restope-container">
                     <p class="restope-container__before">До</p>
