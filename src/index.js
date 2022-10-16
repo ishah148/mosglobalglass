@@ -15,9 +15,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 function handleFullSizeEvents(fsModule) {
     const fullSize = fsModule;
     document.querySelectorAll('.photos__replace-container img').forEach(i => i.addEventListener('click', () => {
-        console.log('fs', fullSize)
         const number = i.dataset.number
         const fs = new fullSize.FullSizeViewer(number, "./assets/work_examples_full")
+    }))
+    document.querySelectorAll('.photo__restope-container img').forEach(i => i.addEventListener('click', () => {
+        const number = i.dataset.number
+        const fs = new fullSize.FullSizeViewer(number, "./assets/skols_full")
     }))
 }
 
@@ -50,13 +53,13 @@ function getPhotosHTML() {
                     <p class="restope-container__before">До</p>
                     <p class="restope-container__after">После</p>
                     <div class="photos__restope-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/skols/2.webp" alt="car-photo" data-></div>
+                            src="./assets/skols/2.webp" alt="car-photo"data-number="1"></div>
                     <div class="photos__restope-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/skols/1.webp" alt="car-photo"></div>
+                            src="./assets/skols/1.webp" alt="car-photo"data-number="2"></div>
                      <div class="photos__restope-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/skols/4.webp" alt="car-photo"></div>
+                            src="./assets/skols/4.webp" alt="car-photo"data-number="3"></div>
                     <div class="photos__restope-photo"><img loading="lazy" width="600" height="450"
-                            src="./assets/skols/3.webp" alt="car-photo"></div>
+                            src="./assets/skols/3.webp" alt="car-photo"data-number="4"></div>
                 </div>
             </div>
             <div class="modal-window__wrapper">
