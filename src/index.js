@@ -82,7 +82,7 @@ function getPhotosHTML() {
                     </svg>
                 </button>
             </div>
-            <button class="modal-window__close-button main">
+            <button class="modal-window__close-button main " aria-label="close">
                 <svg class="modal-window__cross">
                     <use xlink:href="./assets/svg/sprite.svg#cross"></use>
                 </svg>
