@@ -68,7 +68,7 @@ export function start() {
                         <use xlink:href="./assets/sprites/contactsSprite.svg#phone-vibrate"></use>
                     </svg>
                 </a>
-                <h2 class="contacts-window__h2">+7985-464-18-04</h2>
+                <h2 class="contacts-window__h2">+7 (985) 464-18-04</h2>
                 <!-- <h2 class="contacts-window__h2">8945 123 132 13</h2> -->
             </div>
         </div>
