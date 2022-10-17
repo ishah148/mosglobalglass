@@ -59,7 +59,9 @@ header {
     .header-logotypes {
         display: flex;
         gap: 10px;
-        
+        @media (max-width: 576px ){
+            transform: translateY(-8px) scale(0.7);
+        }
         svg {
             width: 30px;
             height: 30px;
